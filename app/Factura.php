@@ -87,6 +87,17 @@ class Factura extends Model
         return $this->belongsTo('App\Cliente');
     }
 
+    public function total_iva()
+    {
+        $total_iva = 0;
+        foreach ($this->impuestos_trasladados as $key => $traslado) {
+            if ($traslado['impuesto'] == 'IVA') {
+                $total_iva = $total_iva + $traslado['importe'];
+            }
+        }
+        return $total_iva;
+    }
+
     public function iva_retencion()
     {
         foreach ($this->impuestos_retenidos as $key => $retencion) {
