@@ -56,6 +56,7 @@ class Factura extends Model
         'totalImpuestosRetenidos',
         'totalImpuestosTrasladados',
         'impuestos_trasladados',
+        'impuestos_retenidos',
         'fechaTimbrado',
         'selloCFD',
         'noCertificadoSAT',
@@ -68,7 +69,8 @@ class Factura extends Model
 
     protected $casts = [
         'conceptos' => 'array',
-        'impuestos_trasladados' => 'array'
+        'impuestos_trasladados' => 'array',
+        'impuestos_retenidos' => 'array'
     ];
 
     protected $dates = ['fecha'];
@@ -83,6 +85,24 @@ class Factura extends Model
     public function cliente()
     {
         return $this->belongsTo('App\Cliente');
+    }
+
+    public function iva_retencion()
+    {
+        foreach ($this->impuestos_retenidos as $key => $retencion) {
+            if ($retencion['impuesto'] == 'IVA') {
+                return $retencion['importe'];
+            }
+        }
+    }
+
+    public function isr_retencion()
+    {
+        foreach ($this->impuestos_retenidos as $key => $retencion) {
+            if ($retencion['impuesto'] == 'ISR') {
+                return $retencion['importe'];
+            }
+        }
     }
 
     public function scopeExiste($query, $sello, $fecha)

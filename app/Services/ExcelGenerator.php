@@ -44,7 +44,7 @@ class ExcelGenerator
         $facturas = $this->datos;
 
         foreach ($facturas as $key => $factura) {
-            $datos_factura = [$factura->fecha, $factura->tipoDeComprobante, $factura->rfcDeEmisor, $factura->nombreDeEmisor, $factura->uuid, $factura->folio, $factura->subTotal, $factura->descuento, $factura->totalImpuestosTrasladados, '', '', $factura->total];
+            $datos_factura = [$factura->fecha, $factura->tipoDeComprobante, $factura->rfcDeEmisor, $factura->nombreDeEmisor, $factura->uuid, $factura->folio, $factura->subTotal, $factura->descuento, $factura->totalImpuestosTrasladados, $factura->iva_retencion(), $factura->isr_retencion(), $factura->total];
 
             array_push($datos_array, $datos_factura);
         }

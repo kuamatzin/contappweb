@@ -67,6 +67,7 @@ class CreateFacturasTable extends Migration
             $table->double('totalImpuestosRetenidos');
             $table->double('totalImpuestosTrasladados');
             //Retenciones
+            $table->text('impuestos_retenidos');
             //Traslados
             $table->text('impuestos_trasladados');
             //Complementos

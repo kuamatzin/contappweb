@@ -23,6 +23,7 @@ class XML
         $impuestos = $xml->children('cfdi', true)->Impuestos;
         $complemento = $xml->children('cfdi', true)->Complemento->children('tfd', true)->attributes();
         $traslados = $impuestos->children('cfdi', true)->Traslados->xpath('cfdi:Traslado');
+        $retenciones = $impuestos->children('cfdi', true)->Retenciones->xpath('cfdi:Retencion');
 
         $factura = [];
 
@@ -104,6 +105,18 @@ class XML
         }
 
         $factura = array_add($factura, 'impuestos_trasladados', $traslados_array);
+
+        //Retenciones
+        $retenciones_array = array();
+        foreach ($retenciones as $key => $traslado) {
+            $traslado_array = array();
+            $traslado_array['impuesto'] = (string)$traslado['impuesto'];
+            $traslado_array['tasa'] = (string)$traslado['tasa'];
+            $traslado_array['importe'] = (string)$traslado['importe'];
+            array_push($retenciones_array, $traslado_array);
+        }
+
+        $factura = array_add($factura, 'impuestos_retenidos', $retenciones_array);
 
         //Complementos
         $factura = array_add($factura, 'selloSAT', (string)$complemento['selloSAT']);
