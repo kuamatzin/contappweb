@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:detallista="http://www.sat.gob.mx/detallista" xmlns:donat="http://www.sat.gob.mx/donat" xmlns:implocal="http://www.sat.gob.mx/implocal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/implocal http://www.sat.gob.mx/sitio_internet/cfd/implocal/implocal.xsd http://www.sat.gob.mx/detallista http://www.sat.gob.mx/sitio_internet/cfd/detallista/detallista.xsd http://www.sat.gob.mx/donat http://www.sat.gob.mx/sitio_internet/cfd/donat/donat11.xsd" version="3.2" serie="F" folio="8609" fecha="2016-01-15T12:13:12" sello="HPHeRspTuzZoUxhEDgblZVKuca2CwCZSPSXnepXiUUCTL7XDSwtZQ8mdaKQRBnMf5MA5YWGtxLwTSxZD0GMstLvAFJetUmo5HttLjR6LDK8QVMyS/8OLwdFjjL9Qz5CJc8qzVyv/EUJ+g1iCUYzc6SX31AaMIo37UlrR7pIdLhU=" formaDePago="Pago en una sola exhibición" noCertificado="00001000000201372915" certificado="MIIEjzCCA3egAwIBAgIUMDAwMDEwMDAwMDAyMDEzNzI5MTUwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxODE5MDA1MFoXDTE2MDYxODE5MDA1MFowgdAxJjAkBgNVBAMTHUFVVE9QQVJURVMgTUVDQU5JQ0FTIFNBIERFIENWMSYwJAYDVQQpEx1BVVRPUEFSVEVTIE1FQ0FOSUNBUyBTQSBERSBDVjEmMCQGA1UEChMdQVVUT1BBUlRFUyBNRUNBTklDQVMgU0EgREUgQ1YxJTAjBgNVBC0THEFNRTk2MDcwNElXOCAvIFJBUkE0NTA2MDlKWUExHjAcBgNVBAUTFSAvIFJBUkE0NTA2MDlISkNNTU4wMjEPMA0GA1UECxMGVU5JREFEMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqpiw5gTEwK8a4tupi68UBpHdxtgqYLlk1aJFP1pKn5WStk+d7QoWCdHXj9TYWNHYm7+Nr1sjlqoldQWTyWAXCVgc4N6BnlZN9sUoXlGJhzpX1fy1+XCJf4VCs7L+l/V/F40zpzGn4fsYnsLlk1nU4ar0Lbi3iueP4CHQyTZNNIQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEAom2kFW0A+h/Pvd88YxHD3WyJbLMVQQnOIaXCarRkrJQFwlfGmzFi0cnRPgqHU0QFyBFvxAa+1Wx/Vuy50hfY9CItW8znPlmKDkhOIHiGJV5iJ1yyH/ChWw/Vj+f/WpF9CzJSj7UMd6T/FQNve81kG2F87oMWVyRWbwYyqhLoewakwifIczDtnsHvxwSz27yA7ulfJB0bvnGNxy1oGV6TzLYEqtwIQVBCuJXYu2TlFObq3uoLe/Nk1SXeggD1TTWpuDQeMcHVDkIkn589OrZTh8P8Blb+OXzLw8v9xeunFFZheBnHyNsQPBaR8xl4S8PqqjB5k6Gdn53uG3dRXbDgHA==" subTotal="10629.00" TipoCambio="1.000000" Moneda="Pesos" total="12329.64" tipoDeComprobante="ingreso" metodoDePago="No identificado" LugarExpedicion="ZAPOPAN, JALISCO">
+  <cfdi:Emisor rfc="AME960704IW8" nombre="AUTOPARTES MECANICAS S.A. DE C.V.">
+    <cfdi:DomicilioFiscal calle="PERIFERICO NORTE" noExterior="3097" colonia="FRACC. TABACHINES" municipio="ZAPOPAN" estado="JALISCO" pais="MEXICO" codigoPostal="45200" />
+    <cfdi:ExpedidoEn calle="PERIFERICO NORTE" pais="MEXICO" />
+    <cfdi:RegimenFiscal Regimen="REGIMEN GENERAL DE LEY PERSONAS MORALES" />
+  </cfdi:Emisor>
+  <cfdi:Receptor rfc="DMR970428S70" nombre="DISTRIBUIDORA DE MOTORES Y REFACCIONES DIESEL DE PUEBLA, SA DE CV.">
+    <cfdi:Domicilio calle="BLVD CARMEN SERDAN NO. 50" colonia="COL. SANTA MARIA LA RIVERA" municipio="PUEBLA" estado="PUEBLA" pais="MEXICO" codigoPostal="72010" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto cantidad="1.00" unidad="pza" descripcion="CUBIERTA TIPO M. BENZ 904-906 CARGA" valorUnitario="3667.0000" importe="3667.00" />
+    <cfdi:Concepto cantidad="5.00" unidad="pza" descripcion="COPLE F-2 C C/GOMA DE POLIURETANO" valorUnitario="220.5000" importe="1102.50" />
+    <cfdi:Concepto cantidad="4.00" unidad="pza" descripcion="COPLE F-4 C/GOMA DE POLIURETANO" valorUnitario="305.0000" importe="1220.00" />
+    <cfdi:Concepto cantidad="5.00" unidad="pza" descripcion="COPLE F-2 C/GOMA DE POLIURETANO" valorUnitario="191.5000" importe="957.50" />
+    <cfdi:Concepto cantidad="1.00" unidad="pza" descripcion="VASTAGO PALANCA TIPO MERCEDES G85" valorUnitario="1050.0000" importe="1050.00" />
+    <cfdi:Concepto cantidad="1.00" unidad="pza" descripcion="TOMA DE AGUA 1 TERMOSTATO TIPO MB904 DEL" valorUnitario="257.5000" importe="257.50" />
+    <cfdi:Concepto cantidad="1.00" unidad="pza" descripcion="TOMA DE AGUA 2 TERMOSTATOS TIPO MB906DEL" valorUnitario="556.0000" importe="556.00" />
+    <cfdi:Concepto cantidad="3.00" unidad="pza" descripcion="VALVULA DE ALIVIO" valorUnitario="317.0000" importe="951.00" />
+    <cfdi:Concepto cantidad="10.00" unidad="pza" descripcion="TERMINALES DE BATERIA C/PLACA NO.6" valorUnitario="27.0000" importe="270.00" />
+    <cfdi:Concepto cantidad="5.00" unidad="pza" descripcion="TERMINAL DE BATERIA 4 TORNILLOS" valorUnitario="30.0000" importe="150.00" />
+    <cfdi:Concepto cantidad="5.00" unidad="pza" descripcion="PORTA BUJE TIPO DODGE CON BUJE" valorUnitario="89.5000" importe="447.50" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="1700.64">
+    <cfdi:Traslados>
+      <cfdi:Traslado impuesto="IVA" tasa="16.00" importe="1700.64" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" version="1.0" UUID="D34F6FED-B7FD-4679-B8EB-9AF25ED9924B" FechaTimbrado="2016-01-15T12:13:14" noCertificadoSAT="00001000000301160463" selloCFD="HPHeRspTuzZoUxhEDgblZVKuca2CwCZSPSXnepXiUUCTL7XDSwtZQ8mdaKQRBnMf5MA5YWGtxLwTSxZD0GMstLvAFJetUmo5HttLjR6LDK8QVMyS/8OLwdFjjL9Qz5CJc8qzVyv/EUJ+g1iCUYzc6SX31AaMIo37UlrR7pIdLhU=" selloSAT="c8YHsZFS9Mks7wwKBTzELeyQHWirsnjWTGRQOTGQkcAWh3DA6bsONJ2RIY92Wxt9eywl97qt/h2t8P8r3wAtmO9rcjdRu8RZ1nbo0sYFZtoCbxFdpXvuKVrpFYIOT0s+SDPPbEGgDkb0gCkR62C7Dw0UvfnbhdCwjW1rGNamWp0=" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

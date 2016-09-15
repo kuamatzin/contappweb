@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:bfa2="http://www.buzonfiscal.com/ns/addenda/bf/2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="SAN RAFAEL, VERACRUZ" metodoDePago="No identificado" tipoDeComprobante="ingreso" total="3191.14" Moneda="MXN" subTotal="2750.98" condicionesDePago="45 días" certificado="MIIExDCCA6ygAwIBAgIUMDAwMDEwMDAwMDAyMDMzODcyNTEwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEzMDQwNTE4NTcwMVoXDTE3MDQwNTE4NTcwMVowggEEMTYwNAYDVQQDEy1ESVNUUklCVUlET1JBIERFIEFVVE9QQVJURVMgUEVTQ0FET1IgU0EgREUgQ1YxNjA0BgNVBCkTLURJU1RSSUJVSURPUkEgREUgQVVUT1BBUlRFUyBQRVNDQURPUiBTQSBERSBDVjE2MDQGA1UEChMtRElTVFJJQlVJRE9SQSBERSBBVVRPUEFSVEVTIFBFU0NBRE9SIFNBIERFIENWMSUwIwYDVQQtExxEQVA5NDEyMjFTWUEgLyBQRU9ENjExMDIyVFhBMR4wHAYDVQQFExUgLyBQRU9ENjExMDIySFZaU0JNMDExEzARBgNVBAsTClNBTiBSQUZBRUwwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAL/GbKJJ6r6k8AdBKQ7hjyLdxt8gxRM+Y/N1T7A1tGW5tvJz/waPc3UOu5mUii13lOyMBsVRK0YdtZ8HvIQNdiGzGD7u1xOKKdJ1oXznpym6fP+W9miHbxLrOJEb68O0mLcsbRoAM1E8LpXvdTe7m1cTnx2yzr8GiTeC3IZ0kRpvAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBBQUAA4IBAQAVjy/0u3r8/H4AXMgjJZZwOoQY0k+h0wX3oh/ltL78N/HZO1RRwmZV1eyhKbCLI42Jd7vQEgHynTiQJXRDUUHmPCjXhkkpMKDXbdkyCwR51wZINwkenFQvyYL8CVgRx9bttCj1jCYUqszXuJs9hERrCYushzXPjauZbGlyZQK5tAl5KHpQpRAUIUnantlaWt7Yl8NF7jKNhhplRmX23zFEB2cYpQof0FcpKrIedPrbxXdEcDx9tXYVxPwaud3c93O4NGcd6Pt7eN2p3heHyHHR1njLTy8Cs9Cp0/PHM4EDCZATiX+/t4wFKy4CVfo3xT2YII60dbKqEtGcmseAy8kS" noCertificado="00001000000203387251" formaDePago="Pago en una sola exhibición" sello="EOeJiIoUvOhmk7Zk2EsSc1XEySYp5HEsBeENTxfbFIwWMrNLadLCQM6z1PVKkRfbUbVmFZ6xK6OKDdxW1CtO080MvmmbuebXUxAHNWN+9rLUGIe0pLalRlHcbpuh3o3E7kVDD9Pk4kEbFe3U0eEZTCsZM3fTMzoNfq2JRrZWDkA=" fecha="2016-01-09T10:44:10" folio="186183" serie="FVEA" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.buzonfiscal.com/ns/addenda/bf/2 http://www.buzonfiscal.com/schema/xsd/Addenda_BF_v20.xsd">
+  <cfdi:Emisor nombre="Distribuidora de Autopartes Pescador, S.A. de C.V." rfc="DAP941221SYA">
+    <cfdi:DomicilioFiscal codigoPostal="93620" pais="México" estado="Veracruz" municipio="San Rafael" localidad="San Rafael" colonia="La Jungla" calle="Juan de Dios Peza s/n" />
+    <cfdi:RegimenFiscal Regimen="REGIMEN GENERAL DE LEY PERSONAS MORALES" />
+  </cfdi:Emisor>
+  <cfdi:Receptor nombre="DISTRIBUIDORA DE MOTORES Y REFACCIONES DIESEL DE PUEBLA,S.A" rfc="DMR970428S70">
+    <cfdi:Domicilio codigoPostal="72010" pais="MEXICO" estado="PUEBLA" municipio="PUEBLA DE ZARAGOZA" localidad="PUEBLA" colonia="COL. SANTA MARIA LA RIVERA" noExterior="50" calle="BLVD CARMEN SERDAN" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto importe="747.45" valorUnitario="149.49" descripcion="DINA RETEN R.TRAS.CAMIONES AUTOBUSES " noIdentificacion="370003 A" unidad="PZA" cantidad="5.00" />
+    <cfdi:Concepto importe="336.85" valorUnitario="336.85" descripcion="RETEN NATIONAL " noIdentificacion="I-370131 A" unidad="PZA" cantidad="1.00" />
+    <cfdi:Concepto importe="189.20" valorUnitario="37.84" descripcion="CHRYS.RETEN PIÐON CAMTA./CAMON. 1965-93 " noIdentificacion="130012" unidad="PZA" cantidad="5.00" />
+    <cfdi:Concepto importe="426.66" valorUnitario="71.11" descripcion="BANDAS HI-POWER 1/2 POR 53 " noIdentificacion="A 51" unidad="PZA" cantidad="6.00" />
+    <cfdi:Concepto importe="161.94" valorUnitario="80.97" descripcion="BANDAS HI-POWER 1/2 POR 65 " noIdentificacion="A 63" unidad="PZA" cantidad="2.00" />
+    <cfdi:Concepto importe="213.96" valorUnitario="106.98" descripcion="BANDA HI-POWER 21/32 POR 58 " noIdentificacion="B 55" unidad="PZA" cantidad="2.00" />
+    <cfdi:Concepto importe="305.34" valorUnitario="152.67" descripcion="DINA.A/A 68-85AUT.OLIMP.(12.0L)=11900GS " noIdentificacion="B 87" unidad="PZA" cantidad="2.00" />
+    <cfdi:Concepto importe="315.64" valorUnitario="157.82" descripcion="DINA.VIAGGIO.AUTOBUS.DET.D.A.93-94(12.7L " noIdentificacion="B 90" unidad="PZA" cantidad="2.00" />
+    <cfdi:Concepto importe="53.94" valorUnitario="53.94" descripcion="SEGURO POR ENVIO " noIdentificacion="SEGURO" unidad="SER" cantidad="1.00" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="440.16">
+    <cfdi:Traslados>
+      <cfdi:Traslado importe="440.16" tasa="16.00" impuesto="IVA" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigital.xsd" selloSAT="cgi0wlAIno/PsfSYAXanTkS9Ps945soeoeCnznOgFEbIcuI6FJt4u7HvIOVsvb0T2usjnyckHLU/HH8WDCfvfHQ/lxmJZLT79nJ4NKfJj+4JMC+feSMfl03UJEizxAEqwuuTuTRQcSJD8XcNoBQSBEgVdXQmhENppTujTbWGA08=" noCertificadoSAT="00001000000202693892" selloCFD="EOeJiIoUvOhmk7Zk2EsSc1XEySYp5HEsBeENTxfbFIwWMrNLadLCQM6z1PVKkRfbUbVmFZ6xK6OKDdxW1CtO080MvmmbuebXUxAHNWN+9rLUGIe0pLalRlHcbpuh3o3E7kVDD9Pk4kEbFe3U0eEZTCsZM3fTMzoNfq2JRrZWDkA=" FechaTimbrado="2016-01-09T10:44:10" UUID="c412f0d8-3732-40f7-9ca3-e89f0fde8d9e" version="1.0" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>
+

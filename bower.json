@@ -1,0 +1,28 @@
+{
+  "name": "Facturas Admin",
+  "description": "Sistema ue permite organizar facturas",
+  "main": "",
+  "authors": [
+    "Carlos Cuamatzin <kuamatzin@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/assets/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sweetalert": "^1.1.3",
+    "bootstrap-sass": "^3.3.6",
+    "dropzone": "^4.3.0",
+    "bootstrap-daterangepicker": "^2.1.23",
+    "vue": "^1.0.26",
+    "vue-resource": "^0.9.3",
+    "font-awesome": "^4.6.3",
+    "bootstrap-material-design": "^4.0.2"
+  }
+}

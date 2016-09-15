@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd" version="3.2" tipoDeComprobante="ingreso" serie="A" folio="9396" fecha="2016-01-23T10:44:59" sello="Iv+dIqk8YceCQ6YAwVIYZJbsTk1Cfh+TFDr9RBwCGEVjxAdTpvFBHMk7ga80rwwD9bnrAPjIr/Q+QJAH8UzaZc7p5VDeIzJdN6mw8yH3BNIwl7oLhx/1Ub7Efqok6x7O+bcQsoP2M1Q8t6wOsUjhdlZEsIZqGHcMXOONVryP0U4=" formaDePago="Pago en una sola exhibición" noCertificado="00001000000202570049" certificado="MIIEpzCCA4+gAwIBAgIUMDAwMDEwMDAwMDAyMDI1NzAwNDkwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMTIxMTE4MDAwNVoXDTE2MTIxMTE4MDAwNVowgegxLjAsBgNVBAMTJUNFTlRSQUwgREUgTVVFTExFUyBERSBQVUVCTEEgU0EgREUgQ1YxLjAsBgNVBCkTJUNFTlRSQUwgREUgTVVFTExFUyBERSBQVUVCTEEgU0EgREUgQ1YxLjAsBgNVBAoTJUNFTlRSQUwgREUgTVVFTExFUyBERSBQVUVCTEEgU0EgREUgQ1YxJTAjBgNVBC0THENNUDkxMDkwNFY2MyAvIEdVUEc1MTEwMTMyOTYxHjAcBgNVBAUTFSAvIEdVUEc1MTEwMTNIUExUUlMwNDEPMA0GA1UECxMGTUFUUklaMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC6/Bqz32vdHmfyUNkV56Im4nkkqRoTkazOalfBb+diou6GPdyJLHqcI21sHBQftqIVdVFeqOm81fCB8Nf9TCUPY2uEHji/oe5RpfRpFvESPRZgqHeUyWs1gJJzA87i/sDf4zkPuP+JL+2hXs101tFPULWvE8JvDwdEURwr4g2kWwIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEAGoEUo83Id8mS2OxIAzVU7lz56Dp23qJ1HMl+q2Qw/Bd5akyNfAiTxDcbIammt/RrdyYR1W1OyDpAnefZKiijr6/sdxYAQe06oo56w3pNY9kxPuTDbZ9rkWtfPILu7b2PcVeIMt8IMcEuVOyzlDlkPbY6UkuvYF3TogDI2Nj89FQAJjTEqAkoxbcFi4FTXYkb4FRAS2IRl9nGDrXq47goZ2wShCpiyK3/eh+IZgDOB31resRwtlaqHu8Io2Ye1iME/fYlqvdJWPGs9zbndLD6P+u34KZRyxqlJlYWMWAmpt2WMZxylkXFLXs40e4t5uCmPhiG+sQ21Q+YS4W/YVA+DQ==" condicionesDePago="Contado" subTotal="3438" Moneda="MXN" total="3988.080000" metodoDePago="Transferencia Electrónica" LugarExpedicion="PUEBLA,PUEBLA" NumCtaPago="8836">
+<cfdi:Emisor rfc="CMP910904V63" nombre="CENTRAL DE MUELLES DE PUEBLA S.A. DE C.V.">
+<cfdi:DomicilioFiscal calle="9 NORTE" noExterior="1803" colonia="CENTRO" localidad="PUEBLA" municipio="PUEBLA" estado="PUEBLA" pais="MEXICO" codigoPostal="72000" /><cfdi:ExpedidoEn calle="9 NORTE" noExterior="1803" colonia="CENTRO" localidad="PUEBLA" municipio="PUEBLA" estado="PUEBLA" pais="MEXICO" codigoPostal="72000" /><cfdi:RegimenFiscal Regimen="Persona moral regimen general" />
+</cfdi:Emisor>
+<cfdi:Receptor rfc="DMR970428S70" nombre="DIST. DE MOTORES Y REFACC. DIESEL DE PUEBLA S.A.">
+<cfdi:Domicilio calle="BLVD. CARMEN SERDAN" noExterior="50" colonia="SANTA MARIA LA RIVERA" localidad="PUEBLA" municipio="PUEBLA" estado="PUEBLA" pais="MEXICO" codigoPostal="72010" /></cfdi:Receptor> 
+<cfdi:Conceptos> 
+  <cfdi:Concepto cantidad="6" unidad="PIEZA" descripcion="TORNILLO CENTRO 1/2 X 8 C/A C/T" valorUnitario="19" importe="114"> 
+  </cfdi:Concepto> 
+  <cfdi:Concepto cantidad="3" unidad="PIEZA" descripcion="2° MERCEDES 28X33 R 1 1/2 EN 7/16" valorUnitario="500" importe="1500"> 
+  </cfdi:Concepto> 
+  <cfdi:Concepto cantidad="4" unidad="PIEZA" descripcion="BUJE FIERRO SOMEX" valorUnitario="24" importe="96"> 
+  </cfdi:Concepto> 
+  <cfdi:Concepto cantidad="4" unidad="PIEZA" descripcion="BUJE BRONCE SOMEX" valorUnitario="42" importe="168"> 
+  </cfdi:Concepto> 
+  <cfdi:Concepto cantidad="4" unidad="PIEZA" descripcion="HOJA 140 4 X 7/16" valorUnitario="390" importe="1560"> 
+  </cfdi:Concepto> 
+</cfdi:Conceptos> 
+<cfdi:Impuestos totalImpuestosRetenidos="0" totalImpuestosTrasladados="550.080000"> 
+   <cfdi:Traslados> 
+    <cfdi:Traslado impuesto="IVA" importe="550.080000" tasa="16"></cfdi:Traslado>
+   </cfdi:Traslados> 
+</cfdi:Impuestos> 
+<cfdi:Complemento> <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" UUID="C70CD1D1-DF67-4D48-B4BD-7A62DB410901" FechaTimbrado="2016-01-23T11:08:17" selloCFD="Iv+dIqk8YceCQ6YAwVIYZJbsTk1Cfh+TFDr9RBwCGEVjxAdTpvFBHMk7ga80rwwD9bnrAPjIr/Q+QJAH8UzaZc7p5VDeIzJdN6mw8yH3BNIwl7oLhx/1Ub7Efqok6x7O+bcQsoP2M1Q8t6wOsUjhdlZEsIZqGHcMXOONVryP0U4=" noCertificadoSAT="00001000000401041203" selloSAT="XbuZQk9gDmn2BXFS3pPubkfKag3uIjjBFerXj/JMB6ELfdOUNOZzCTefANeQZvyiu7ebm38CE5KbHPYZ/E1jaaJ7e5IECxcqAv1xleLSYzCHreYWfi6Yr0gXobObmUuv1GvlZXjclV9ZcNCipKwdE2UOiJPMekRCIUcs2PvfqkwwQDy3mCXiqErfvFu6tg9dx2Yg3B1AUot4Q0d2uJVePbx1+/D64I1mEy2Aak5TtO/JJwnTD/l9+C08WORYb7s4d+hmiV6PEySMWvD4jUOUAAhvt13pGjH/kw1r2fYWdcCdHalotYXX0+mp+JymhOg1UDveZETBxxTAa/4LrlOX+w==" />
+</cfdi:Complemento></cfdi:Comprobante>

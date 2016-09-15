@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<cfdi:Comprobante version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd" serie="PUEFP" folio="45409" fecha="2016-01-26T21:52:00" sello="V/u7gbSgarFQclDHdfuupxhMWFV3MUDFxgOKjryn8dEkZA7/GOR8jaRoGG1/4dO7ZFSuXdLGCIhItA/mB4xAUxD3xRoJr4QSMwqUumldvrZkWqpCJiqS3XtjFfLY6U7r5D61UZScS8TX2XwB97BXwi5lNMQjM2oGaE5N5m5nbds=" formaDePago="PAGO 8/12" noCertificado="00001000000202330215" certificado="MIIEqzCCA5OgAwIBAgIUMDAwMDEwMDAwMDAyMDIzMzAyMTUwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMTExMjIyMjIxN1oXDTE2MTExMjIyMjIxN1owgewxLzAtBgNVBAMUJkVMIEFHVUlMQSBDT01QQdFJQSBERSBTRUdVUk9TIFNBIERFIENWMS8wLQYDVQQpFCZFTCBBR1VJTEEgQ09NUEHRSUEgREUgU0VHVVJPUyBTQSBERSBDVjEvMC0GA1UEChQmRUwgQUdVSUxBIENPTVBB0UlBIERFIFNFR1VST1MgU0EgREUgQ1YxJTAjBgNVBC0THEFTRTk0MTEyNE5ONCAvIE5BR0E2MDEyMzFEMzQxHjAcBgNVBAUTFSAvIE5BR0E2MDEyMzFIREZWVEIwMzEQMA4GA1UECxMHQ2VudHJhbDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAuRW3mkK8u0sM1UyRknGHHQTxxTwXXxn46ZdvfsNuPfGO8068srz0j6huphOpjYmMHpFIL087twxlgBxQ9g7SG9LQcYCuFa296zGc78NvBqY5sanD/0JTAFGv1q//OZJoQLWpr0nkM0Ph6trxH+J7TDuVnF4MpqPWPzXbT7N7To0CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAFFhbCy+mL68E7lf+nemDsWLS0w7520/U5lcGUH9qcU8g+01KuENp0HH0jORVSU6V8E4dM6teq7HRos2UPWANoN1h3rfU/oNfYrzlg06A01gY3WzyBAG8LJxTmltlCCcnYjuULteLP+exHSokAXeWguPGMgrbVMZODsoDqyfZWpxWYyMFetET49SNox4f5O/k2bTuVALHqydiPljxlqH/hi5w80eaXuKqYjH5LNd+PE8GoUbzLfSqZcR2QVR654JiTmdXkd2krGv1/TECOQODOy3JWI/jKP2vCGcpe2cVwKtX5/OkBfUSeLzQb82AXbAUH67KOVBLJIBeiZIzOcirLY=" subTotal="432.00" descuento="0.00" TipoCambio="1.0000" Moneda="MXP" total="501.00" metodoDePago="TARJETA DE CRÉDITO" tipoDeComprobante="ingreso" LugarExpedicion="Puebla" NumCtaPago="kO?H" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cfdi="http://www.sat.gob.mx/cfd/3">
+<cfdi:Emisor rfc="ASE941124NN4" nombre="El Aguila Compañía de Seguros SA de CV">
+<cfdi:DomicilioFiscal calle="Insurgentes Sur" noExterior="1106" noInterior="Piso 1" colonia="Tlacoquemécatl" municipio="Benito Juárez" estado="Distrito Federal" pais="México" codigoPostal="03200" />
+<cfdi:ExpedidoEn calle="Av. San Martin Texmelucan" noExterior="59" colonia="La Paz" municipio="Puebla" estado="Puebla" pais="México" codigoPostal="72160" />
+<cfdi:RegimenFiscal Regimen="Régimen General de Ley Personas Morales" />
+</cfdi:Emisor>
+<cfdi:Receptor rfc="DMR970428S70" nombre="DISTRIBUIDORA DE MOTORES Y REFACCIONES DIESEL DE PUEBLA SA">
+<cfdi:Domicilio calle="BLDV CARMEN SERDAN" noExterior="50" colonia="SANTA MARIA LA RIVERA" municipio="PUEBLA" estado="PUEBLA" pais="MÉXICO" codigoPostal="72010" />
+</cfdi:Receptor>
+<cfdi:Conceptos>
+<cfdi:Concepto cantidad="1" unidad="NO APLICA" descripcion="21101255615 Póliza de Seguro Automotriz" valorUnitario="394.00" importe="394.00" />
+<cfdi:Concepto cantidad="1" unidad="NO APLICA" descripcion="Gastos Expedición" valorUnitario="38.00" importe="38.00" />
+</cfdi:Conceptos>
+<cfdi:Impuestos totalImpuestosTrasladados="69.00">
+<cfdi:Traslados>
+<cfdi:Traslado impuesto="IVA" tasa="16.00" importe="69.00" />
+</cfdi:Traslados>
+</cfdi:Impuestos>
+<cfdi:Complemento>
+<tfd:TimbreFiscalDigital FechaTimbrado="2016-01-26T22:24:23" UUID="4CD91971-E86C-2C86-DA6F-E90F95BD805E" noCertificadoSAT="00001000000202771790" selloCFD="V/u7gbSgarFQclDHdfuupxhMWFV3MUDFxgOKjryn8dEkZA7/GOR8jaRoGG1/4dO7ZFSuXdLGCIhItA/mB4xAUxD3xRoJr4QSMwqUumldvrZkWqpCJiqS3XtjFfLY6U7r5D61UZScS8TX2XwB97BXwi5lNMQjM2oGaE5N5m5nbds=" selloSAT="DrAXRVCTrcP39zd4PxxC5WsadRcYCPfSBwZvlLDVR2N9nt/iialVZf3i7U6FNQFYDoonijnMwfwXO92RO8sdIjdTjgwKGLB7GRJ1oEwGhWtPiRl9SqVgPKK80Brgzz8m3LGxdhsFtkPp9pI5+0kZzy1KmFGivgviQJN7dEt4Z3M=" version="1.0" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" />
+</cfdi:Complemento>
+</cfdi:Comprobante>

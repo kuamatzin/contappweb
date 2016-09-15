@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:bfa2="http://www.buzonfiscal.com/ns/addenda/bf/2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="BOULEVARD CARMEN SERDAN #44 C SANTA MARIA LA RIBERA, PUEBLA PUEBLA" metodoDePago="EFECTIVO M.N." tipoDeComprobante="ingreso" total="100.00" subTotal="86.21" certificado="MIIEqjCCA5KgAwIBAgIUMDAwMDEwMDAwMDAyMDMzNDI1ODkwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEzMDMyOTE2MjYxNloXDTE3MDMyOTE2MjYxNlowgesxJzAlBgNVBAMTHkNBREVOQSBDT01FUkNJQUwgT1hYTyBTQSBERSBDVjEnMCUGA1UEKRMeQ0FERU5BIENPTUVSQ0lBTCBPWFhPIFNBIERFIENWMScwJQYDVQQKEx5DQURFTkEgQ09NRVJDSUFMIE9YWE8gU0EgREUgQ1YxJTAjBgNVBC0THENDTzg2MDUyMzFONCAvIFBFUE82MTAyMDNBRTIxHjAcBgNVBAUTFSAvIFBFUE82MTAyMDNIVFNSUlMwNjEnMCUGA1UECxMeQ0FERU5BIENPTUVSQ0lBTCBPWFhPIFNBIERFIENWMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDnCL8LtA65i88UY+sUTEJEd8X1tn8KRagLIE8rOlaMaDGDfRwsNa4y13FH6k7JBkJfwwLX4yVlt7G3fgkUxYSnVt4ch9KSbYcRc2d7ope+Jwd+n50YzuLRGqq6khkVRuif4eSrvx4Qb9Ym9Hk7XeqDGkhHJHB0QLT59F4az3n0swIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEAliDxGm+8Qa3lAq8IDvo5U+LUKDB9Z5ZgYpA911kO5Pb3mMazzFIQgm/alKfzhe8wWPCCAfILOt2SeEGxRUBfmfyeeUmRKGcCJ8wAfQToyd4wM5jsWG04vHpiu13DUxF98wNDwirZhBxkwCVXvQ51q5D3tAzM9cIR5LGo2QHezCdeRDf6GCsq+zon9rHmxIH1o9WMgUSrTAAgFOR2drOUuI0AgbAHKPfXEpQFSzjSkLTpezElbwI/e9uAZyZJwHUns0yKmLMuEfk6mY/BLgrPRghQ/XZh7v56lDXVRmG/upxla50kYeflQeuZb9HvCXUoMqIhiUulBP7vli0KNaBLZg==" noCertificado="00001000000203342589" formaDePago="PAGO EN UNA SOLA EXHIBICION" sello="ehLUlDRnVqrGrq/UD38h88iOjI6u4E0FcgDAV0PG1JWJ4Hw6oUDsXTZPcDDqMUQcoVG7HtsMnFef7+CQ2LVbZfhu6Yr2anw8vrMkYaVtLvX3sxf+HiXwl6/ZMOAWgF8ZUzUHwMFlTsKntyW5n4j5gL2Yg/k/MU94cUs3C+pMcsI=" fecha="2016-01-18T14:01:12" folio="149020904" serie="PBI" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.buzonfiscal.com/ns/addenda/bf/2 http://www.buzonfiscal.com/schema/xsd/Addenda_BF_v20.xsd">
+  <cfdi:Emisor nombre="CADENA COMERCIAL OXXO, S.A. DE C.V." rfc="CCO8605231N4">
+    <cfdi:DomicilioFiscal codigoPostal="64480" pais="MEXICO" estado="NUEVO LEON" municipio="MONTERREY" colonia="TALLERES" noExterior="1235 NORTE" calle="EDISON" />
+    <cfdi:ExpedidoEn codigoPostal="72010" pais="MEXICO" calle="BOULEVARD CARMEN SERDAN #44 C SANTA MARIA LA RIBERA, PUEBLA PUEBLA" />
+    <cfdi:RegimenFiscal Regimen="No Aplica" />
+  </cfdi:Emisor>
+  <cfdi:Receptor nombre="DISTRIBUIDORA DE MOTORES Y REFACCIONES DIESEL DE PUEBLA SA." rfc="DMR970428S70">
+    <cfdi:Domicilio codigoPostal="72010" pais="MEXICO" municipio="PUEBLA PUE" calle="BVLB. CARMEN SERDAN No 50" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto importe="86.21" valorUnitario="86.21" descripcion="NEXTEL TAE $100" unidad="EA" cantidad="1.000" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="13.79">
+    <cfdi:Traslados>
+      <cfdi:Traslado importe="13.79" tasa="16.00" impuesto="IVA" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigital.xsd" selloSAT="OTFrpmALO9Ih6VPk6zeNgL7zJehDojWJZ5Cs/5cYMQ0dhTbUVk9hzjcTiA/QrT1pSqK+fqCA9ktOfWBndNfLH34gFHhwwutCLnIcDQLSy59eZlwCn0nay7Mimw4f70IsQBHbk/GBSVrAY3z4SPbdaymT++rAfb1KSWuXgUkuZNE=" noCertificadoSAT="00001000000202693892" selloCFD="ehLUlDRnVqrGrq/UD38h88iOjI6u4E0FcgDAV0PG1JWJ4Hw6oUDsXTZPcDDqMUQcoVG7HtsMnFef7+CQ2LVbZfhu6Yr2anw8vrMkYaVtLvX3sxf+HiXwl6/ZMOAWgF8ZUzUHwMFlTsKntyW5n4j5gL2Yg/k/MU94cUs3C+pMcsI=" FechaTimbrado="2016-01-18T14:01:12" UUID="3ba64c02-91eb-4c55-b850-e94796512939" version="1.0" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>
+

@@ -1,0 +1,154 @@
+@import "resources/assets/bower/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "resources/assets/bower/sweetalert/dist/sweetalert";
+@import "resources/assets/bower/bootstrap-daterangepicker/daterangepicker.scss";
+@import "resources/assets/bower/sweetalert/dist/sweetalert";
+@import "resources/assets/bower/font-awesome/scss/font-awesome";
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+    margin-top: 120px;
+    margin-bottom: 60px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #636b6f;
+    background-color: #f5f8fa;
+}
+
+.navbar-default {
+    background-color: white !important;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.modal-body p {
+    word-wrap: break-word;
+}
+
+/* ****************************************************** */
+
+
+.media
+{
+    /*box-shadow:0px 0px 4px -2px #000;*/
+    margin: 20px 0;
+    padding:30px;
+}
+.dp
+{
+    border:10px solid #eee;
+    transition: all 0.2s ease-in-out;
+}
+.dp:hover
+{
+    border:2px solid #eee;
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);  
+    -webkit-transform:rotate(360deg);  
+    /*-webkit-font-smoothing:antialiased;*/
+}
+
+.listrap {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.listrap li {
+    margin: 0;
+    padding: 5px;
+}
+
+.listrap strong {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.listrap .listrap-toggle {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+}
+
+.listrap .listrap-toggle span {
+    background-color: #428bca;
+    opacity: 0.8;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.listrap .listrap-toggle span:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e013";
+}
+
+.listrap li.active .listrap-toggle span {
+    display: block;
+}
+
+
+
+#custom-search-input {
+    margin:0;
+    margin-top: 10px;
+    padding: 0;
+}
+
+#custom-search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #5AA3D3;
+}
+
+.search-query:focus + button {
+    z-index: 3;   
+}

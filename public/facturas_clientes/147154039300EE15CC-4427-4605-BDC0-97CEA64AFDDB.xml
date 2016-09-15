@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:detallista="http://www.sat.gob.mx/detallista" xmlns:donat="http://www.sat.gob.mx/donat" xmlns:implocal="http://www.sat.gob.mx/implocal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/implocal http://www.sat.gob.mx/sitio_internet/cfd/implocal/implocal.xsd http://www.sat.gob.mx/detallista http://www.sat.gob.mx/sitio_internet/cfd/detallista/detallista.xsd http://www.sat.gob.mx/donat http://www.sat.gob.mx/sitio_internet/cfd/donat/donat11.xsd" version="3.2" serie="E" folio="12735" fecha="2016-01-09T10:00:17" sello="BlyrQuFXVO3L2Rz4yXa9odCLOGs9BlCuQzj6AlLQ4vjcBkRspEvAdVW1Ece96RtZbk9PKpY8ekjmTAmMrsGWr61W2juvk1vfUabdjvzbv6ul46CztBKI8K6u+zqbLKwbjmVI/b5189u6SyOc9t5e+wbtu/sYGi5ihkXDX5mTI04=" formaDePago="Pago en una sola exhibición" noCertificado="00001000000303238506" certificado="MIIEbTCCA1WgAwIBAgIUMDAwMDEwMDAwMDAzMDMyMzg1MDYwDQYJKoZIhvcNAQEFBQAwggGKMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMR8wHQYJKoZIhvcNAQkBFhBhY29kc0BzYXQuZ29iLm14MSYwJAYDVQQJDB1Bdi4gSGlkYWxnbyA3NywgQ29sLiBHdWVycmVybzEOMAwGA1UEEQwFMDYzMDAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBEaXN0cml0byBGZWRlcmFsMRQwEgYDVQQHDAtDdWF1aHTDqW1vYzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTUwMwYJKoZIhvcNAQkCDCZSZXNwb25zYWJsZTogQ2xhdWRpYSBDb3ZhcnJ1YmlhcyBPY2hvYTAeFw0xNDAzMDcxODExMzdaFw0xODAzMDcxODExMzdaMIG5MSMwIQYDVQQDExpKVUxJTyBDRVNBUiBKSU1FTkVaIFNBTlRPUzEjMCEGA1UEKRMaSlVMSU8gQ0VTQVIgSklNRU5FWiBTQU5UT1MxIzAhBgNVBAoTGkpVTElPIENFU0FSIEpJTUVORVogU0FOVE9TMRYwFAYDVQQtEw1KSVNKNjAwMTIzMjE1MRswGQYDVQQFExJKSVNKNjAwMTIzSFBMTU5MMDIxEzARBgNVBAsTClNVQ1VSU0FMIEUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAN3DFuYPlezROcJR3j6d88vH9lpGJrP4WPbK2bhO8NzIBgq6OiLsN5aJsCE8vyePgFbckFnA0oy+9XlFGjf/PIjMwlZRUAVYNSh+UXCUP5ElYfzPlm4RbjluULVMgAIVzEqRcYeiJayGfIKzuN5frJbOsGT+zD/jw1sJDVrPOeSPAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBBQUAA4IBAQCrL6vM0oWEuf5Ze3bJW924wdH55wZOGsWYTseqbTOrKmsqkuK2JJf+nNyW/5nie48RiwthmpQ0OjaXgD8LIiPuJtVxQyLSLrIReVox5fRhQebGhFzJMpSItFTu6sZ6LBvSeVjCx9T5bNUK/iYoFYnryyxkqK6dQM0iUjkMWSZY1dSTMtKzwIs7dg7LLaPa60zKEFdGCm1y59sTZ8mYC4beFhUsfsJA6RbsydtP6NvpJzb83zuarsPh6NEWw0NgSDOrGQc4nMrYnp4Ra2jCItIiGcItv+VrKzZDd00EQi9s+PbUk12YqA03kcUpvkwe+bTGLslCydN+0dDkxkK2ebiq" subTotal="70.83" TipoCambio="1.000000" Moneda="Pesos" total="82.16" tipoDeComprobante="ingreso" metodoDePago="Efectivo" LugarExpedicion="PUEBLA, PUEBLA">
+  <cfdi:Emisor rfc="JISJ600123215" nombre="JULIO CESAR JIMENEZ SANTOS">
+    <cfdi:DomicilioFiscal calle="CAMINO REAL A SAN FELIPE HUEYOTLIPAN" noExterior="121 LOCAL 1" colonia="SAN FELIPE HUEYOTLIPAN" municipio="PUEBLA" estado="PUEBLA" pais="MEXICO" codigoPostal="72030" />
+    <cfdi:ExpedidoEn calle="CAMINO REAL A SAN FELIPE HUEYOTLIPAN" noExterior="121 LOCAL 1" colonia="SAN FELIPE HUEYOTLIPAN" municipio="PUEBLA" estado="PUEBLA" pais="MEXICO" codigoPostal="72030" />
+    <cfdi:RegimenFiscal Regimen="REGIMEN DE LAS PERSONAS FISICAS CON ACTIVIDADES EMPRESARIALES Y PROFESIONALES" />
+  </cfdi:Emisor>
+  <cfdi:Receptor rfc="DMR970428S70" nombre="DISTRIBUIDORA DE MOTORES Y REFACCIONES DIESEL DE PUEBLA SA.">
+    <cfdi:Domicilio calle="BLVD. CARMEN SERDAN" noExterior="50" colonia="SANTA MARIA LA RIVERA" localidad="PUEBLA" estado="PUEBLA" pais="MEXICO" codigoPostal="72010" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto cantidad="3" unidad="pz" descripcion="TG5NC-COMPLETO-3/8 X 2-1/2" valorUnitario="4.310000" importe="12.93" />
+    <cfdi:Concepto cantidad="100" unidad="pz" descripcion="ARANDELA DE PRESION3/8" valorUnitario="0.195800" importe="19.58" />
+    <cfdi:Concepto cantidad="100" unidad="pz" descripcion="ARANDELA DE PRESION5/16" valorUnitario="0.124600" importe="12.46" />
+    <cfdi:Concepto cantidad="2" unidad="pz" descripcion="Cinta masking tape, 1/2'" valorUnitario="12.931035" importe="25.86" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="11.33">
+    <cfdi:Traslados>
+      <cfdi:Traslado impuesto="IVA" tasa="16.00" importe="11.33" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd" selloCFD="BlyrQuFXVO3L2Rz4yXa9odCLOGs9BlCuQzj6AlLQ4vjcBkRspEvAdVW1Ece96RtZbk9PKpY8ekjmTAmMrsGWr61W2juvk1vfUabdjvzbv6ul46CztBKI8K6u+zqbLKwbjmVI/b5189u6SyOc9t5e+wbtu/sYGi5ihkXDX5mTI04=" FechaTimbrado="2016-01-09T10:00:29" UUID="00ee15cc-4427-4605-bdc0-97cea64afddb" version="1.0" noCertificadoSAT="00001000000202809550" selloSAT="G8pS0JYE5jdDxzUphQh6EsSjyHShGgvm7TKQMh8eHJjQyXc8TnJ+9dLDQVvaec0LjbwOB88W0JKGsysmIf121LA9iYHihsb2dV5xkkhnV7Sfsd9Jq3Q7a95R43gUcR1a9g/Elhhia8aqH4xvJCCGU2TPtej6wPESoKH6rM5Dx+0=" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>
+

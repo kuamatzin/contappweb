@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd" version="3.2" serie="F" folio="211544" fecha="2016-01-22T17:29:10" sello="cr6iujrkzgyGRBZIzBrKUiBEYCfkTu7VQHtxBVYCeNyTFUM3O+ucPQsADUi+KyZI9lL1iOOUWJyCNLoy5tkR+1pULyn5k4Or4u5PKi3GCSwSsfDPhvs/XZeusK8/EsZE07wJMN/nAnW8LGMWbGO4FvVXwTiuHG89z2HR9HOoivE=" formaDePago="Pago en una sola exhibición" noCertificado="00001000000300064224" certificado="MIIEzTCCA7WgAwIBAgIUMDAwMDEwMDAwMDAzMDAwNjQyMjQwDQYJKoZIhvcNAQEFBQAwggGKMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMR8wHQYJKoZIhvcNAQkBFhBhY29kc0BzYXQuZ29iLm14MSYwJAYDVQQJDB1Bdi4gSGlkYWxnbyA3NywgQ29sLiBHdWVycmVybzEOMAwGA1UEEQwFMDYzMDAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBEaXN0cml0byBGZWRlcmFsMRQwEgYDVQQHDAtDdWF1aHTDqW1vYzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTUwMwYJKoZIhvcNAQkCDCZSZXNwb25zYWJsZTogQ2xhdWRpYSBDb3ZhcnJ1YmlhcyBPY2hvYTAeFw0xMzA1MDkyMjIyMzhaFw0xNzA1MDkyMjIyMzhaMIIBGDE+MDwGA1UEAxM1Q09NRVJDSUFMSVpBRE9SQSBERSBST0RBTUlFTlRPUyBZIEFVVE9QQVJURVMgU0EgREUgQ1YxPjA8BgNVBCkTNUNPTUVSQ0lBTElaQURPUkEgREUgUk9EQU1JRU5UT1MgWSBBVVRPUEFSVEVTIFNBIERFIENWMT4wPAYDVQQKEzVDT01FUkNJQUxJWkFET1JBIERFIFJPREFNSUVOVE9TIFkgQVVUT1BBUlRFUyBTQSBERSBDVjElMCMGA1UELRMcQ1JBOTQwNzE1SDUyIC8gQUFHRTY5MDYxMUFVNzEeMBwGA1UEBRMVIC8gQUFHRTY5MDYxMUhOTE1ORzA1MQ8wDQYDVQQLEwZ1bmlkYWQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALvZXDQ8fjdCBKlP/W/cPKmq1fXGifGrwkBJqBLElYu44+55/TVu0ZrzXDcyjLPbv+EMeGN8Zn/pFouCnxzcT4o/EJ96bGqgWK+VPCz7xD6WBt6whAIY8Yqfu5mqIoBnhTgxfphHJahG1QAZeI8nZJzcc+r4Ow+Mkhtg/krDRbxHAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBBQUAA4IBAQAORQVfoXo6P/VM+92ZqUVNMRUpBMfc1NkOVT+qJFsAz5tI9mobJ51IH4dl4qXO9R2ue5gaa51kOOWRACWHY+MqpABdrnZio7nTp9293PHBN7uy3AbKPD5kQ0HHLcylXLmqU795l8MpsXD95O0GeA/EcKwi9/honVLmm18esxbG4gTzeroUGN6KwvKLpn2EJjrfHY0t34TGb0TxwBbd/0yat5Bth7r5KoywEym5SFTrz3RRkUepqRe722VhiwzqsrD0UgRS/46KwSFRvuah3TCspEwuZEQLuEZt8uz3wt7RCmX6AT5dqrQI+sgNuZ3W1v+uonwzF8tA/eAiaRIw0y+y" subTotal="4208.80" TipoCambio="1.00" Moneda="MXN" total="4882.21" metodoDePago="Transferencia" LugarExpedicion="Monterrey, N.L." NumCtaPago="8368" tipoDeComprobante="ingreso">
+  <cfdi:Emisor rfc="CRA940715H52" nombre="COMERCIALIZADORA DE RODAMIENTOS Y AUTOPARTES, S.A. DE C.V.">
+    <cfdi:DomicilioFiscal calle="Av. Bernardo Reyes Nte." noExterior="4329" colonia="Niño Artillero" municipio="Monterrey" estado="N.L." pais="MEXICO" codigoPostal="64280" />
+    <cfdi:RegimenFiscal Regimen="Régimen general de ley personas morales" />
+  </cfdi:Emisor>
+  <cfdi:Receptor rfc="DMR970428S70" nombre="DISTRIBUIDORA DE MOTORES Y REFACCIONES DIESEL DE PUEBLA, S.A.">
+    <cfdi:Domicilio calle="BLVD. CARMEN SERDAN No." noExterior="50" colonia="COL. SANTA MARIA LA RIBERA" municipio="PUEBLA" estado="PUEBLA" pais="México" codigoPostal="72010" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto cantidad="2" unidad="PZ" noIdentificacion="AMB SET 123" descripcion="180  3780/3720 JGO. CONO Y TAZA----" valorUnitario="110.70" importe="221.40">
+      <cfdi:InformacionAduanera numero="151616415001833" fecha="2015-06-25" aduana="MANZANILLO" />
+    </cfdi:Concepto>
+    <cfdi:Concepto cantidad="2" unidad="PZ" noIdentificacion="AMB SET 401" descripcion="200.5 580 / 572 SET CONO Y TAZA ---" valorUnitario="241.60" importe="483.20">
+      <cfdi:InformacionAduanera numero="3752 2003997" fecha="2012-09-13" aduana="MANZANILLO" />
+    </cfdi:Concepto>
+    <cfdi:Concepto cantidad="2" unidad="PZ" noIdentificacion="AMB SET 404" descripcion="200.7 598 A / 592 A   CONO Y TAZA--" valorUnitario="304.20" importe="608.40">
+      <cfdi:InformacionAduanera numero="37523005455" fecha="2013-09-26" aduana="MANZANILLO" />
+    </cfdi:Concepto>
+    <cfdi:Concepto cantidad="4" unidad="PZ" noIdentificacion="AMB SET 406" descripcion="201 JGO.3782 / 3720 ---------------" valorUnitario="117.00" importe="468.00">
+      <cfdi:InformacionAduanera numero="151616415001833" fecha="2015-06-25" aduana="MANZANILLO" />
+    </cfdi:Concepto>
+    <cfdi:Concepto cantidad="2" unidad="PZ" noIdentificacion="AMB SET 408" descripcion="202 JGO. 39590 / 39520 ------------" valorUnitario="150.90" importe="301.80">
+      <cfdi:InformacionAduanera numero="151616415001833" fecha="2015-06-25" aduana="MANZANILLO" />
+    </cfdi:Concepto>
+    <cfdi:Concepto cantidad="2" unidad="PZ" noIdentificacion="AMB SET 411" descripcion="202.5 47686/47620------------------" valorUnitario="245.40" importe="490.80" />
+    <cfdi:Concepto cantidad="2" unidad="PZ" noIdentificacion="AMB SET 412" descripcion="203 HM212047/212011 ---------------" valorUnitario="235.20" importe="470.40">
+      <cfdi:InformacionAduanera numero="3752 2004939" fecha="2012-10-20" aduana="MANZANILLO" />
+    </cfdi:Concepto>
+    <cfdi:Concepto cantidad="2" unidad="PZ" noIdentificacion="AMB SET 414" descripcion="204.5 HM 218248/ HM 218210 --------" valorUnitario="276.70" importe="553.40">
+      <cfdi:InformacionAduanera numero="151616415002041" fecha="2015-07-20" aduana="MANZANILLO" />
+    </cfdi:Concepto>
+    <cfdi:Concepto cantidad="2" unidad="PZ" noIdentificacion="AMB SET 415" descripcion="204.6 HM 518445 / HM 518410" valorUnitario="240.70" importe="481.40">
+      <cfdi:InformacionAduanera numero="151616415001833" fecha="2015-06-25" aduana="MANZANILLO" />
+    </cfdi:Concepto>
+    <cfdi:Concepto cantidad="1" unidad="NA" noIdentificacion="S" descripcion="CARGO POR SERVICIOS VARIOS-----" valorUnitario="130.00" importe="130.00" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="673.41">
+    <cfdi:Traslados>
+      <cfdi:Traslado impuesto="IVA" tasa="16.00" importe="673.41" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigital.xsd" version="1.0" UUID="15feddbe-671e-483a-8cc7-584848f00242" FechaTimbrado="2016-01-22T17:34:58" selloCFD="cr6iujrkzgyGRBZIzBrKUiBEYCfkTu7VQHtxBVYCeNyTFUM3O+ucPQsADUi+KyZI9lL1iOOUWJyCNLoy5tkR+1pULyn5k4Or4u5PKi3GCSwSsfDPhvs/XZeusK8/EsZE07wJMN/nAnW8LGMWbGO4FvVXwTiuHG89z2HR9HOoivE=" noCertificadoSAT="00001000000202693892" selloSAT="yDCOZNBkEeMpKTipus1zH6PgrGXvfq+CoMu8EwOpSPKUuudDntHM3tNB5AU2KX5AF0Rfr1SDskdcO/4Tt7xj4/rR7A5EwCVV1iKR1EjiY/Tg39XfQ/JgnQoQ8BccDgrXjVAAlJc2QGC/00Bf4uxXLBdueUbadzlqnEisjVrBKh4=" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>
+
