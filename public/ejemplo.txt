@@ -8,8 +8,8 @@
     "TipoConsulta": "Recibidos",
     "TipoProceso": "Descarga",
     "TipoArchivo": "Xml",
-    "UrlNotificacion": "http://999.99.99.99/ejemplo/callback.php",
-    "EmailNotificacion": "kuamatzin@gmail.com"
+    "UrlNotificacion": "http://www.contapp.inovuz.com/comprobar",
+    "EmailNotificacion": "kuamatzin@hotmail.com"
   },
   "Reporte": {
     "TipoReporte": "Excel",
