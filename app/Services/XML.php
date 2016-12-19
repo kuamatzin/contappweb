@@ -23,7 +23,12 @@ class XML
         $impuestos = $xml->children('cfdi', true)->Impuestos;
         $complemento = $xml->children('cfdi', true)->Complemento->children('tfd', true)->attributes();
         $traslados = $impuestos->children('cfdi', true)->Traslados->xpath('cfdi:Traslado');
-        $retenciones = $impuestos->children('cfdi', true)->Retenciones->xpath('cfdi:Retencion');
+        $retenciones = $impuestos->children('cfdi', true)->Retenciones;
+        $retenciones = json_encode($retenciones);
+        $retenciones = json_decode($retenciones,TRUE);
+        if (sizeof($retenciones) > 0) {
+            $retenciones = $impuestos->children('cfdi', true)->Retenciones->xpath('cfdi:Retencion');
+        }
 
         $factura = [];
 

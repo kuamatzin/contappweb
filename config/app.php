@@ -157,6 +157,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Chumper\Zipper\ZipperServiceProvider::class,
 
         //Agregados
         Collective\Html\HtmlServiceProvider::class,
@@ -215,6 +216,8 @@ return [
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Zipper' => Chumper\Zipper\Zipper::class,
+        'cURL' => anlutro\cURL\Laravel\cURL::class,
     ],
 
 ];

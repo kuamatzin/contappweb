@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Services\ExcelGenerator;
 use App\Services\FacturaPDF;
 use App\Services\XML;
+use App\Services\ZIP;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -84,6 +85,8 @@ class FacturaController extends Controller
         $tipoBusqueda = Input::get('emisores');
         $tipoFactura = Input::get('tipo');
         $rfcBusqueda = Input::get('rfcBusqueda');
+        $mes = Input::get('mes');
+        $rfc_cliente = Cliente::findOrFail($cliente_id)->rfc;
         //$fechaInicial = Input::get('fechaInicial') . 'T00:00:00';
         $fechaInicial = Input::get('ejercicio_fiscal') . '-' . Input::get('mes') . '-01T00:00:00';
         $fechaInicial = Carbon::createFromFormat('Y-m-d\TH:i:s', $fechaInicial);
@@ -171,6 +174,10 @@ class FacturaController extends Controller
             if (Input::get('excel') == '1') {
                 $excel = new ExcelGenerator('Reporte', 'Carlos Cuamatzin', 'Nivel6', 'Reporte Facturas', $facturas);
                 $excel->crearExcel();
+            }
+            else if (Input::get('zip') == '1') {
+                $zip = new ZIP($facturas);
+                $zip->zipFiles($mes, $rfc_cliente);
             }
             else {
                 return $facturas;

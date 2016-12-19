@@ -15,7 +15,9 @@
         "dompdf/dompdf": "~0.6.1",
         "robbiep/cloudconvert-laravel": "2.*",
         "simplesoftwareio/simple-qrcode": "~1",
-        "maatwebsite/excel": "~2.1.0"
+        "maatwebsite/excel": "~2.1.0",
+        "chumper/zipper": "0.6.x",
+        "anlutro/curl": "^1.4"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -41,17 +41,39 @@
         </div>
         <div class="panel-body">
             <div class="row">
-                <div class="col-md-4">
-                    <p>Filtrar por fecha</p>
-                    <input type="hidden" value="{{$categoria->id}}" v-model="cliente_id">
-                    <input type="text" class="form-control" id="daterange">
+                <div class="col-md-1">
+                    <p>E. Fiscal</p>
+                    <select class="form-control" v-model="ejercicio_fiscal">
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016" selected>2016</option>
+                    </select>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
+                    <p>Mes</p>
+                    <select class="form-control" required="required" v-model="mes">
+                        <option value="01" selected>Enero</option>
+                        <option value="02">Febrero</option>
+                        <option value="03">Marzo</option>
+                        <option value="04">Abril</option>
+                        <option value="05">Mayo</option>
+                        <option value="06">Junio</option>
+                        <option value="07">Julio</option>
+                        <option value="08">Agosto</option>
+                        <option value="09">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
                     <p>Filtrar por RFC</p>
-                    <input type="text" name="rfcDeEmisor" id="inputRfcDeEmisor" class="form-control" placeholder="Buscar por RFC" v-model="rfcBusqueda">
+                    <input type="text" name="rfcBusqueda" id="inputRfcDeEmisor" class="form-control" placeholder="Buscar por RFC" v-model="rfcBusqueda">
                 </div>
                 <div class="col-md-4">
                     <br>
+                    <input type="hidden" class="form-control" value="{{$categoria->cliente->id}}" v-model="cliente_id">
                     <button type="button" class="btn btn-primary" id="buscar" v-on:click="busquedaFacturas">Buscar</button>
                 </div>
             </div>
@@ -269,7 +291,7 @@
             },
             busquedaFacturas: function(){
                 var that = this;
-                this.$http.get('/facturas/busquedaFacturas/' + this.cliente_id + '?fechaInicial=' + this.start + '&fechaFinal=' + this.end + '&rfc=' + this.rfcBusqueda + '&emisores=1&categoria_id=' + $('#categoria_id').val()).then(function(facturas){
+                this.$http.get('/facturas/busquedaFacturas/' + this.cliente_id + '?ejercicio_fiscal=' + this.ejercicio_fiscal + '&mes=' + this.mes + '&rfcBusqueda=' + this.rfcBusqueda + '&emisores=1&categoria_id=' + $('#categoria_id').val()).then(function(facturas){
                     that.facturas = facturas.data;
                 }, function(error){
                     console.log(error)

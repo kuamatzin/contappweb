@@ -159,8 +159,21 @@
                         <option value="egreso">Egreso</option>
                     </select>
                     <br>
-                    <button type="button" class="btn btn-success" v-on:click="descargarReporte" download>Generar Excel &nbsp;&nbsp;<i class="fa fa-file-excel-o" aria-hidden="true"></i></button>
-                    <button type="button" class="btn btn-primary pull-right" v-on:click="busquedaFacturas">Buscar &nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-6">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-success" v-on:click="descargarReporte" download>Generar Excel &nbsp;&nbsp;<i class="fa fa-file-excel-o" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-warning" v-on:click="descargarFacturas" download>Descargar Carpeta&nbsp;&nbsp;<i class="fa fa-file-excel-o" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-primary" v-on:click="busquedaFacturas">Buscar &nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <hr>
@@ -496,6 +509,7 @@
             facturas: '',
             categoria_id_editar: '',
             cliente_id: '',
+            rfc_cliente: '{{$cliente->rfc}}',
             nombreCategoria: '',
             nombreCategoriaEditar: '',
             rfcBusqueda: '',
@@ -585,6 +599,14 @@
                 var that = this;
                 this.$http.get('/facturas/busquedaFacturas/' + this.cliente_id + '?ejercicio_fiscal=' + this.ejercicio_fiscal + '&mes=' + this.mes + '&rfcBusqueda=' + this.rfcBusqueda + '&tipo=' + this.tipo + '&comprobante=' + this.comprobante + '&excel=1').then(function(facturas){
                     window.location.href = 'http://contador.dev/reportes/reporteFacturas.xlsx';
+                }, function(error){
+                    console.log(error)
+                });
+            },
+            descargarFacturas: function(){
+                var that = this;
+                this.$http.get('/facturas/busquedaFacturas/' + this.cliente_id + '?ejercicio_fiscal=' + this.ejercicio_fiscal + '&mes=' + this.mes + '&rfcBusqueda=' + this.rfcBusqueda + '&tipo=' + this.tipo + '&comprobante=' + this.comprobante + '&zip=1').then(function(facturas){
+                    window.location.href = 'http://contador.dev/' + this.rfc_cliente + '_' + this.mes + '.zip';
                 }, function(error){
                     console.log(error)
                 });

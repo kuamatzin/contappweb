@@ -1,0 +1,28 @@
+{
+  "Version": "1.0",
+  "Contribuyente": {
+    "Rfc": "",
+    "ClaveCiec": ""
+  },
+  "Configuracion": {
+    "TipoConsulta": "Recibidos",
+    "TipoProceso": "Descarga",
+    "TipoArchivo": "Xml",
+    "UrlNotificacion": "http://999.99.99.99/ejemplo/callback.php",
+    "EmailNotificacion": "kuamatzin@gmail.com"
+  },
+  "Reporte": {
+    "TipoReporte": "Excel",
+    "NombreReporte": "Resultado"
+  },
+  "FiltradoRangoRecibidos": {
+    "Anio": "2016",
+    "Mes": "09",
+    "EstadoComprobante": "Vigente",
+    "ClaveComplemento": "00"
+  },
+  "Archivos": {
+    "NombreDirectorio": "[ANIO_EMISION]-[MES_EMISION]",
+    "NombreArchivo": "[RFC_EMISOR]-[RFC_RECEPTOR]-[UUID]"
+  }
+}
