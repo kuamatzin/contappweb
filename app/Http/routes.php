@@ -1,8 +1,10 @@
 <?php
 
 use App\Factura;
+use App\Request as RequestApp;
 use App\Services\ExcelGenerator;
 use App\Services\FacturaPDF;
+use Illuminate\Http\Request;
 
 Route::singularResourceParameters();
 
@@ -21,14 +23,6 @@ Route::get('/', function () {
 });
 
 Route::get('/descargar', function(){
-
-    /**
-     * Created by Facturando.
-     * Date: 2016.03.16 - 11:50 AM
-     * Issue:
-     *   Ejemplo que muestra como enviar una solicitud de descarga al web service
-     */
-
     header('Content-type: text/html; charset=utf-8');
 
     $filename = 'ejemplo.txt';
@@ -62,8 +56,11 @@ Route::get('/descargar', function(){
     dd($respuesta);
 });
 
-Route::get('comprobar', function(){
-    dd("Hola, quiero descargar facturas");
+Route::get('comprobar', function(Request $request){
+    $data = ['hola' => 'hola'];
+    $request = new RequestApp;
+    $request->request = $data;
+    $request->save();
 });
 
 Route::auth();

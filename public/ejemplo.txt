@@ -9,7 +9,7 @@
     "TipoProceso": "Descarga",
     "TipoArchivo": "Xml",
     "UrlNotificacion": "http://www.contapp.inovuz.com/comprobar",
-    "EmailNotificacion": "kuamatzin@hotmail.com"
+    "EmailNotificacion": "kuamatzin@gmail.com"
   },
   "Reporte": {
     "TipoReporte": "Excel",
