@@ -56,7 +56,7 @@ Route::get('/descargar', function(){
     dd($respuesta);
 });
 
-Route::get('comprobar', function(Request $request){
+Route::post('comprobar', function(Request $request){
     $data = ['hola' => 'hola'];
     $request = new RequestApp;
     $request->request = $data;
