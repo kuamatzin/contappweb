@@ -6,6 +6,8 @@ use App\Services\ExcelGenerator;
 use App\Services\FacturaPDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use ElephantIO\Client;
+use ElephantIO\Engine\SocketIO\Version1X;
 
 Route::singularResourceParameters();
 
@@ -94,10 +96,21 @@ Route::get('/consulta', function(){
     dd($respuesta->Solicitud);
 });
 
-Route::post('comprobar', function(){
+Route::post('comprobar', function(Request $request){
     $request = new RequestApp;
     $request->request = 'HOLA';
     $request->save();
+
+    $request2 = new RequestApp;
+    $request2->request = $request->all();
+    $request2->save();
+});
+
+Route::get('socket', function(){
+    $client = new Client(new Version1X('http://localhost:3000'));
+    $client->initialize();
+    $client->emit('new', ['foo' => 'bar']);
+    $client->close();
 });
 
 Route::auth();

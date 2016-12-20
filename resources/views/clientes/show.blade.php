@@ -484,7 +484,16 @@
 </div>
 @endsection
 @section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
 <script>
+
+    var socket = io.connect("http://localhost:3000");
+
+
+    socket.on('saludo', function(msg){
+        alert("HOLA")
+    });
+
     Dropzone.options.facturas = {
       paramName: 'factura',
       acceptedFiles: '.xml',

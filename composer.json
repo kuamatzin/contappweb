@@ -17,7 +17,8 @@
         "simplesoftwareio/simple-qrcode": "~1",
         "maatwebsite/excel": "~2.1.0",
         "chumper/zipper": "0.6.x",
-        "anlutro/curl": "^1.4"
+        "anlutro/curl": "^1.4",
+        "wisembly/elephant.io": "~3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
