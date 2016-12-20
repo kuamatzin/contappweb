@@ -40,6 +40,7 @@ Route::get('/descargar', function(){
     $json->{"Contribuyente"}->{'ClaveCiec'} = '11235813';
 
     $post['data'] = json_encode($json);
+
     $postdata = http_build_query($post);
 
     $server = 'http://www.descargarcfdi.com/descarga';
@@ -56,10 +57,44 @@ Route::get('/descargar', function(){
     dd($respuesta);
 });
 
+
+Route::get('/consulta', function(){
+    header('Content-type: text/html; charset=utf-8');
+
+    $filename = 'consulta.txt';
+
+    $jsonText = file_get_contents($filename);
+
+    $json = json_decode($jsonText);
+
+    if (json_last_error() != JSON_ERROR_NONE)
+    {
+      dd("Error en json");
+    }
+
+    $json->{"Contribuyente"}->{'Rfc'} = 'CUHC901208KQ8';
+    $json->{"Contribuyente"}->{'Identificador'} = 'AFB6A16D-733B-9312-F430-39A53BBDEA16';
+
+    $post['data'] = json_encode($json);
+    $postdata = http_build_query($post);
+
+    $server = 'http://www.descargarcfdi.com/consulta';
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $server);
+    curl_setopt($ch, CURLOPT_POST, 0);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $respuesta = curl_exec($ch);
+    $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    $respuesta = json_decode($respuesta);
+    dd($respuesta->Solicitud);
+});
+
 Route::post('comprobar', function(Request $request){
-    $data = ['hola' => 'hola'];
     $request = new RequestApp;
-    $request->request = $data;
+    $request->request = 'HOLA';
     $request->save();
 });
 
