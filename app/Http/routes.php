@@ -73,7 +73,7 @@ Route::get('/consulta', function(){
     }
 
     $json->{"Contribuyente"}->{'Rfc'} = 'CUHC901208KQ8';
-    $json->{"Contribuyente"}->{'Identificador'} = '999EE2FB-18CF-5873-61D1-3D0E35353047';
+    $json->{"Contribuyente"}->{'Identificador'} = 'AFB6A16D-733B-9312-F430-39A53BBDEA16';
 
     $post['data'] = json_encode($json);
     $postdata = http_build_query($post);
@@ -92,7 +92,7 @@ Route::get('/consulta', function(){
     dd($respuesta->Solicitud);
 });
 
-Route::post('comprobar', function(Request $request){
+Route::post('comprobar', function(){
     $request = new RequestApp;
     $request->request = 'HOLA';
     $request->save();
