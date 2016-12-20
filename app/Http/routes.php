@@ -97,9 +97,9 @@ Route::get('/consulta', function(){
 });
 
 Route::post('comprobar', function(Request $request){
-    $request = new RequestApp;
-    $request->request = 'HOLA';
-    $request->save();
+    $request1 = new RequestApp;
+    $request1->request = 'HOLA';
+    $request1->save();
 
     $request2 = new RequestApp;
     $request2->request = $request->all();
