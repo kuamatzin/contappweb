@@ -5,6 +5,7 @@ use App\Request as RequestApp;
 use App\Services\ExcelGenerator;
 use App\Services\FacturaPDF;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 Route::singularResourceParameters();
 
@@ -64,7 +65,8 @@ Route::get('/consulta', function(){
     $filename = 'consulta.txt';
 
     $jsonText = file_get_contents($filename);
-
+    $identificador = Input::get('id');
+    
     $json = json_decode($jsonText);
 
     if (json_last_error() != JSON_ERROR_NONE)
@@ -73,7 +75,7 @@ Route::get('/consulta', function(){
     }
 
     $json->{"Contribuyente"}->{'Rfc'} = 'CUHC901208KQ8';
-    $json->{"Contribuyente"}->{'Identificador'} = 'AFB6A16D-733B-9312-F430-39A53BBDEA16';
+    $json->{"Contribuyente"}->{'Identificador'} = $identificador;
 
     $post['data'] = json_encode($json);
     $postdata = http_build_query($post);
