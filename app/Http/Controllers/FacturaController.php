@@ -42,15 +42,24 @@ class FacturaController extends Controller
             'factura' => 'required|mimes:xml'
         ]);
         $file = $request->file('factura');
+        //Aqui empieza
         $contents = File::get($file);
         $xml = new \SimpleXMLElement($contents);
         $sello = (string)$xml['sello'];
         $fecha = Carbon::createFromFormat('Y-m-d\TH:i:s', (string)$xml['fecha']);
         //Seleccionamos un nombre único para la factura
-        $name = time() . $file->getClientOriginalName();
+        //Si pasa entonces la request viene de la carga manual de facturas
+        if(strpos($file->getRealPath(), '/private/var/tmp/') !== false){
+            $name = time() . $file->getClientOriginalName();
+            $cliente_id = $request->cliente_id;
+        }
+        else {
+            $name = time() . $file->getFileName();
+            $cliente_id = Cliente::select('id')->where('rfc', $rfc)->first();
+        }
         //Verificar si ya esta en la base de datos
         if (Factura::existe($sello, $fecha)->count() == 0) {
-            $factura = XML::createFactura($xml, $name, $request->cliente_id, $fecha);
+            $factura = XML::createFactura($xml, $name, $cliente_id, $fecha);
             
             if ($factura['rfcDeEmisor'] == $cliente->rfc) {
                 //Factura emitida
@@ -67,12 +76,11 @@ class FacturaController extends Controller
                     return "Factura no pertece a cliente";
                 }
             }
-            $factura_nueva = Auth::user()->facturas()->create($factura);
+            $user = Cliente::findOrFail($cliente_id)->user;
+            $factura_nueva = $user->facturas()->create($factura);
             //Agregar nueva factura
             //Guardamos en el sistema de archivos del servidor
             $file->move('facturas_clientes', $name);
-            $filename_word = FacturaPDF::create($factura_nueva);
-            $factura_nueva->archivo_word = $filename_word;
             return "Factura guardada";
         }
         else {

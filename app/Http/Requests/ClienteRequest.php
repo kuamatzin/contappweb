@@ -25,7 +25,7 @@ class ClienteRequest extends Request
     {
         return [
             'nombre' => 'required',
-            'rfc' => 'required'
+            'rfc' => 'required|unique:clientes'
         ];
     }
 }

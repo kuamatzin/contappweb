@@ -487,11 +487,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
 <script>
 
-    var socket = io.connect("http://localhost:3000");
+    var socket = io.connect("https://calm-plateau-72045.herokuapp.com");
 
 
     socket.on('saludo', function(msg){
-        alert("HOLA")
+        var data = JSON.parse(msg.data);
+        console.log(data.Contribuyente.Identificador)
+        alert(data.Contribuyente.Identificador)
     });
 
     Dropzone.options.facturas = {
