@@ -304,6 +304,15 @@ Route::get('request', function(){
     $client->close();
 });
 
+Route::get('testSocket', function(){
+    $peticion = RequestApp::all()->last();
+    $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
+    //$client = new Client(new Version1X('http://localhost:3000'));
+    $client->initialize();
+    $client->emit('new', ['data' => $peticion->request]);
+    $client->close();
+});
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');

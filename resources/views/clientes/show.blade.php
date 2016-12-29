@@ -488,10 +488,12 @@
 <script>
 
     var socket = io.connect("https://calm-plateau-72045.herokuapp.com");
-
+    //var socket = io.connect("http://localhost:3000");
 
     socket.on('saludo', function(msg){
-        var data = JSON.parse(msg.data);
+        console.log(msg.data)
+        var data = JSON.parse(msg.data.data);
+        console.log(data)
         console.log(data.Contribuyente.Identificador)
         alert(data.Contribuyente.Identificador)
     });
