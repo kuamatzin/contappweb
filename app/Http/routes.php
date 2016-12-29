@@ -197,9 +197,11 @@ Route::post('comprobar', function(Request $request){
     }
     //3. RUN FUNCTION FOR CREATE FACTURAS
     //SEND TO SOCKET TO SEND TO THE CLIENT THE DOWNLOAD HAS FINISHED
+    $peticion = RequestApp::all()->last();
     $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
+    //$client = new Client(new Version1X('http://localhost:3000'));
     $client->initialize();
-    $client->emit('new', $peticion->request);
+    $client->emit('new', ['data' => $peticion->request]);
     $client->close();
 });
 
@@ -299,8 +301,9 @@ Route::get('request', function(){
     //3. RUN FUNCTION FOR CREATE FACTURAS
     //SEND TO SOCKET TO SEND TO THE CLIENT THE DOWNLOAD HAS FINISHED
     $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
+    //$client = new Client(new Version1X('http://localhost:3000'));
     $client->initialize();
-    $client->emit('new', $peticion->request);
+    $client->emit('new', ['data' => $peticion->request]);
     $client->close();
 });
 
