@@ -38,6 +38,64 @@
         </div>
     </div>
     <br><br>
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <div class="container">
+                <div class="row">
+                    <ul class="listrap">
+                        <li>
+                            <div class="listrap-toggle">
+                                <span></span>
+                                <img src="http://image.flaticon.com/icons/svg/148/148764.svg" class="img-circle" />
+                            </div>
+                            <strong>Descargar Facturas</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row" v-if="descargar_sat_form">
+                <div class="col-md-3">
+                    <div class="form-group{{ $errors->has('ejercicio_fiscal') ? ' has-error' : '' }}">
+                        {!! Form::label('ejercicio_fiscal', 'Ejercicio Fiscal') !!}
+                        {!! Form::select('ejercicio_fiscal', [2016 => '2016', 2017 => '2017'], 2016, ['id' => 'ejercicio_fiscal', 'class' => 'form-control', 'v-model' => 'd_ejercicio_fiscal']) !!}
+                        <small class="text-danger">{{ $errors->first('ejercicio_fiscal') }}</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group{{ $errors->has('mes') ? ' has-error' : '' }}">
+                        {!! Form::label('mes', 'Mes') !!}
+                        {!! Form::select('mes', ['01' => 'Enero', '02' => 'Febrero', '03' => 'Marzo', '04' => 'Abril', '05' => 'Mayo', '06' => 'Junio', '07' => 'Julio', '08' => 'Agosto', '09' => 'Septiembre', '10' => 'Octubre', '11' => 'Noviembre', '12' => 'Diciembre'], '01', ['id' => 'mes', 'class' => 'form-control', 'v-model' => 'd_mes']) !!}
+                        <small class="text-danger">{{ $errors->first('mes') }}</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group{{ $errors->has('consulta') ? ' has-error' : '' }}">
+                        {!! Form::label('consulta', 'Tipo Consulta') !!}
+                        {!! Form::select('consulta', ['Recibidos' => 'Recibidas', 'Emitidos' => 'Emitidas'], 'Recibidos', ['id' => 'consulta', 'class' => 'form-control', 'v-model' => 'd_consulta']) !!}
+                        <small class="text-danger">{{ $errors->first('consulta') }}</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        {!! Form::label('password', 'Password') !!}
+                        {!! Form::password('password', ['class' => 'form-control', 'required' => 'required', 'v-model' => 'd_password']) !!}
+                        <small class="text-danger">{{ $errors->first('password') }}</small>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-warning" v-on:click="descargarSat">Descargar</button>
+                </div>
+            </div>
+            <div class="row" v-if="!descargar_sat_form">
+                <img src="http://www.nameacronym.net/images/loading.gif" alt="" class="img-responsive center-block">
+                <h3 v-if="descargar_sat_text">Descarga completada, almacenando facturas en el sistema...</h3>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
     <div class="panel panel-warning">
         <div class="panel-heading">
             <div class="container">
@@ -495,7 +553,9 @@
         var data = JSON.parse(msg.data.data);
         console.log(data)
         console.log(data.Contribuyente.Identificador)
-        alert(data.Contribuyente.Identificador)
+        vm.descargar_sat_form = true,
+        vm.descargar_sat_text = false
+        swal("Solicitud completada");
     });
 
     Dropzone.options.facturas = {
@@ -529,7 +589,9 @@
             tipo: '',
             start: moment().format('YYYY-MM-DD'),
             end: moment().format('YYYY-MM-DD'),
-            detalle_factura: ''
+            detalle_factura: '',
+            descargar_sat_form: true,
+            descargar_sat_text: false
         },
         ready: function(){
             
@@ -622,6 +684,59 @@
                     window.location.href = 'http://contador.dev/' + this.rfc_cliente + '_' + this.mes + '.zip';
                 }, function(error){
                     console.log(error)
+                });
+            },
+            descargarSat: function(){
+                var that = this;
+                if (this.d_password == '') {
+                    sweetAlert("Oops...", "Ingresa la contraseña", "error");
+                    return 0;
+                }
+                var data = {
+                    anio: this.d_ejercicio_fiscal,
+                    mes: this.d_mes,
+                    tipo_consulta: this.d_consulta,
+                    rfc: this.rfc_cliente,
+                    password: this.d_password
+                };
+                this.$http.post('/descargar', data).then(function(response){
+                    that.descargar_sat_form = false;
+                    console.log("JASPLAS")
+                    //Respuesta exitosa
+                    if (response.status == 200) {
+                        var data = JSON.parse(response.data);
+                        var status = data.Respuesta.Status;
+                        var error = data.Respuesta.Error;
+                        var id = data.Contribuyente.Identificador;
+                        if (error) {
+                            alert(error);
+                            that.descargar_sat_form = true;
+                        }
+                        //Si no hay error se procede a comprobar el estadod e la solicitud
+                        else {
+                            if (id) {
+                                //Esperamos para darle chance al web service de procesar la solicitud
+                                setTimeout(function() {
+                                    that.$http.get('/consulta?id=' + id).then(function(response_consulta){
+                                        if (response_consulta.status == 200) {
+                                            var data = JSON.parse(response_consulta.data);
+                                            if (data.Solicitud.Error.Numero == 0) {
+                                                sweetAlert("Oops...", "Constraseña Incorrecta", "error");
+                                                that.descargar_sat_form = true;
+                                            }
+                                            if (data.Solicitud.Resumen.Resultado) {
+                                                that.descargar_sat_text = true;
+                                            }
+                                        }
+                                    }, function(error){
+
+                                    });
+                                }, 9000);
+                            }
+                        }
+                    }
+                }, function(error){
+
                 });
             }
         }

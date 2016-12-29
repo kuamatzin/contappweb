@@ -29,7 +29,7 @@ Route::get('/', function () {
     return redirect('clientes');
 });
 
-Route::get('/descargar', function(){
+Route::post('/descargar', function(Request $request){
     header('Content-type: text/html; charset=utf-8');
 
     $filename = 'ejemplo.txt';
@@ -42,9 +42,14 @@ Route::get('/descargar', function(){
     {
       dd("Error en json");
     }
-
-    $json->{"Contribuyente"}->{'Rfc'} = 'CUHC901208KQ8';
-    $json->{"Contribuyente"}->{'ClaveCiec'} = '11235813';
+    
+    //$json->{"Contribuyente"}->{'Rfc'} = 'CUHC901208KQ8';
+    //$json->{"Contribuyente"}->{'ClaveCiec'} = '11235813';
+    $json->{"Contribuyente"}->{'Rfc'} = $request->rfc;
+    $json->{"Contribuyente"}->{'ClaveCiec'} = $request->password;
+    $json->{'FiltradoRangoRecibidos'}->{'Anio'} = $request->anio;
+    $json->{'FiltradoRangoRecibidos'}->{'Mes'} = $request->mes;
+    $json->{'Configuracion'}->{'TipoConsulta'} = $request->tipo_consulta;
 
     $post['data'] = json_encode($json);
 
@@ -61,7 +66,7 @@ Route::get('/descargar', function(){
     $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
 
-    dd($respuesta);
+    return $respuesta;
 });
 
 //Aqui se lanza la request para que descargue
@@ -96,8 +101,8 @@ Route::get('/consulta', function(){
     $respuesta = curl_exec($ch);
     $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
-    $respuesta = json_decode($respuesta);
-    dd($respuesta->Solicitud);
+    
+    return $respuesta;
 });
 
 //Aqui guarda cuando la petición es completada
