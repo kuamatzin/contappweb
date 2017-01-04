@@ -77,6 +77,7 @@ Route::get('/consulta', function(){
 
     $jsonText = file_get_contents($filename);
     $identificador = Input::get('id');
+    $rfc = Input::get('rfc');
     
     $json = json_decode($jsonText);
 
@@ -84,8 +85,7 @@ Route::get('/consulta', function(){
     {
       dd("Error en json");
     }
-
-    $json->{"Contribuyente"}->{'Rfc'} = 'CUHC901208KQ8';
+    $json->{"Contribuyente"}->{'Rfc'} = $rfc;
     $json->{"Contribuyente"}->{'Identificador'} = $identificador;
 
     $post['data'] = json_encode($json);
@@ -156,7 +156,9 @@ Route::post('comprobar', function(Request $request){
         if ($extension == 'xml') {
             $contents = File::get($file);
             $xml = new \SimpleXMLElement($contents);
-            $sello = (string)$xml['sello'];
+            $complemento = $xml->children('cfdi', true)->Complemento->children('tfd', true)->attributes();
+            $uuid = (string)$complemento['UUID'];
+
             $fecha = Carbon::createFromFormat('Y-m-d\TH:i:s', (string)$xml['fecha']);
             //Seleccionamos un nombre único para la factura
             //Si pasa entonces la request viene de la carga manual de facturas
@@ -170,7 +172,7 @@ Route::post('comprobar', function(Request $request){
                 $cliente_id = Cliente::select('id')->where('rfc', $rfc)->first()->id;
             }
             //Verificar si ya esta en la base de datos
-            if (Factura::existe($sello, $fecha)->count() == 0) {
+            if (Factura::existe($uuid)->count() == 0) {
                 $factura = XML::createFactura($xml, $name, $cliente_id, $fecha);
                 
                 if ($factura['rfcDeEmisor'] == $rfc) {
@@ -259,7 +261,9 @@ Route::get('request', function(){
         if ($extension == 'xml') {
             $contents = File::get($file);
             $xml = new \SimpleXMLElement($contents);
-            $sello = (string)$xml['sello'];
+            $complemento = $xml->children('cfdi', true)->Complemento->children('tfd', true)->attributes();
+            $uuid = (string)$complemento['UUID'];
+
             $fecha = Carbon::createFromFormat('Y-m-d\TH:i:s', (string)$xml['fecha']);
             //Seleccionamos un nombre único para la factura
             //Si pasa entonces la request viene de la carga manual de facturas
@@ -273,8 +277,8 @@ Route::get('request', function(){
                 $cliente_id = Cliente::select('id')->where('rfc', $rfc)->first()->id;
             }
             //Verificar si ya esta en la base de datos
-            if (Factura::existe($sello, $fecha)->count() == 0) {
-                $factura = XML::createFactura($xml, $name, $cliente_id, $fecha);
+            if (Factura::existe($uuid)->count() == 0) {
+                $factura = XML::createFactura($xml, $name, $cliente_id, $fecha, $key);
                 
                 if ($factura['rfcDeEmisor'] == $rfc) {
                     //Factura emitida

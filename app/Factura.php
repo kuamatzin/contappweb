@@ -116,9 +116,9 @@ class Factura extends Model
         }
     }
 
-    public function scopeExiste($query, $sello, $fecha)
+    public function scopeExiste($query, $uuid)
     {
-        return $query->where('sello', $sello)->where('fecha', $fecha)->get();
+        return $query->where('uuid', $uuid)->get();
     }
 
     public function getUuidAttribute($value){

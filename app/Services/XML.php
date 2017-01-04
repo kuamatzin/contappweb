@@ -13,7 +13,7 @@ class XML
         
     }
 
-    public static function createFactura($xml, $name, $cliente_id, $fecha)
+    public static function createFactura($xml, $name, $cliente_id, $fecha, $key)
     {
         $atributos_faltantes = $xml->children('http://www.sat.gob.mx/cfd/3');
     
@@ -22,7 +22,13 @@ class XML
         $conceptos = $xml->children('cfdi', true)->Conceptos;
         $impuestos = $xml->children('cfdi', true)->Impuestos;
         $complemento = $xml->children('cfdi', true)->Complemento->children('tfd', true)->attributes();
-        $traslados = $impuestos->children('cfdi', true)->Traslados->xpath('cfdi:Traslado');
+        $traslados = $impuestos->children('cfdi', true)->Traslados;
+        $traslados = json_encode($traslados);
+        $traslados = json_decode($traslados,TRUE);
+        if (sizeof($traslados)) {
+            $traslados = $impuestos->children('cfdi', true)->Traslados->xpath('cfdi:Traslado');
+        }
+        
         $retenciones = $impuestos->children('cfdi', true)->Retenciones;
         $retenciones = json_encode($retenciones);
         $retenciones = json_decode($retenciones,TRUE);
@@ -54,30 +60,35 @@ class XML
         $factura = array_add($factura, 'nombreDeEmisor', (string)$xml->xpath('cfdi:Emisor')[0]['nombre']);
 
         //Domicilio Emisor
-        $factura = array_add($factura, 'calleDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['calle']);
-        $factura = array_add($factura, 'noExteriorDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['noExterior']);
-        $factura = array_add($factura, 'noInteriorDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['noInterior']);
-        $factura = array_add($factura, 'coloniaDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['colonia']);
-        $factura = array_add($factura, 'localidadDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['localidad']);
-        $factura = array_add($factura, 'municipioDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['municipio']);
-        $factura = array_add($factura, 'estadoDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['estado']);
-        $factura = array_add($factura, 'paisDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['pais']);
-        $factura = array_add($factura, 'codigoPostalDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['codigoPostal']);
+        
+        if ($emisor->xpath('cfdi:DomicilioFiscal')) {
+            $factura = array_add($factura, 'calleDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['calle']);
+            $factura = array_add($factura, 'noExteriorDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['noExterior']);
+            $factura = array_add($factura, 'noInteriorDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['noInterior']);
+            $factura = array_add($factura, 'coloniaDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['colonia']);
+            $factura = array_add($factura, 'localidadDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['localidad']);
+            $factura = array_add($factura, 'municipioDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['municipio']);
+            $factura = array_add($factura, 'estadoDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['estado']);
+            $factura = array_add($factura, 'paisDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['pais']);
+            $factura = array_add($factura, 'codigoPostalDeEmisor', (string)$emisor->xpath('cfdi:DomicilioFiscal')[0]['codigoPostal']);
+        }
         
         //Receptor
         $factura = array_add($factura, 'rfcDeReceptor', (string)$xml->xpath('cfdi:Receptor')[0]['rfc']);
         $factura = array_add($factura, 'nombreDeReceptor', (string)$xml->xpath('cfdi:Receptor')[0]['nombre']);
 
         //Domicilio Receptor
-        $factura = array_add($factura, 'calleDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['calle']);
-        $factura = array_add($factura, 'noExteriorDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['noExterior']);
-        $factura = array_add($factura, 'noInteriorDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['noInterior']);
-        $factura = array_add($factura, 'coloniaDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['colonia']);
-        $factura = array_add($factura, 'localidadDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['localidad']);
-        $factura = array_add($factura, 'municipioDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['municipio']);
-        $factura = array_add($factura, 'estadoDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['estado']);
-        $factura = array_add($factura, 'paisDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['pais']);
-        $factura = array_add($factura, 'codigoPostalDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['codigoPostal']);
+        if ($receptor->xpath('cfdi:Domicilio')) {
+            $factura = array_add($factura, 'calleDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['calle']);
+            $factura = array_add($factura, 'noExteriorDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['noExterior']);
+            $factura = array_add($factura, 'noInteriorDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['noInterior']);
+            $factura = array_add($factura, 'coloniaDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['colonia']);
+            $factura = array_add($factura, 'localidadDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['localidad']);
+            $factura = array_add($factura, 'municipioDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['municipio']);
+            $factura = array_add($factura, 'estadoDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['estado']);
+            $factura = array_add($factura, 'paisDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['pais']);
+            $factura = array_add($factura, 'codigoPostalDeReceptor', (string)$receptor->xpath('cfdi:Domicilio')[0]['codigoPostal']);
+        }
 
         //Conceptos
         $conceptos_totales = $conceptos->xpath('cfdi:Concepto');

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:bfa2="http://www.buzonfiscal.com/ns/addenda/bf/2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="PUEBLA, MEXICO" metodoDePago="03" tipoDeComprobante="ingreso" total="14301.37" Moneda="PESOS" subTotal="12328.77" certificado="MIIEsTCCA5mgAwIBAgIUMDAwMDEwMDAwMDAyMDI1NzgzNjAwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMTIxMjAwNTk1MVoXDTE2MTIxMjAwNTk1MVowgfIxKzApBgNVBAMTIkdSVVBPIE1FWElDQU5PIERFIFNFR1VST1MgU0EgREUgQ1YxKzApBgNVBCkTIkdSVVBPIE1FWElDQU5PIERFIFNFR1VST1MgU0EgREUgQ1YxKzApBgNVBAoTIkdSVVBPIE1FWElDQU5PIERFIFNFR1VST1MgU0EgREUgQ1YxJTAjBgNVBC0THEdNUzk3MTExMEJUQSAvIEFVQVQ2ODA3MTM4UzYxHjAcBgNVBAUTFSAvIEFVQVQ2ODA3MTNNREZHQ1IwMjEiMCAGA1UECxMZU3VjdXJzYWwgRGlzdHJpdG8gRmVkZXJhbDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4vwc0TXUNsM3j0Yeuxo4ltiuAtJohP6ffMIgEd7R4HStHuI5pI2lyE7cL1BscOAEVEr5hh67IeMkOrxD58kGQTH4QXKrEJ4UxBm6B13sKgGdLvNOWXTbMQGgI6caTGAc/QZFLA1+VzfY8T4yEEWeJrRl4nhR3JEIG+QwxE1ZFTsCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAACXtKS2cSRokPq9jzDj3XjnLnDLZZxbmsqXaGk3RcD8aRB1nMv/E4SwxL6Ei9TVtqf0i2W8MBNf5IsRVd+REr7Er9fXATM9BTuOkdjrBTP4h/FDc58STj4dCbuOAypYFi1JU2pDRF3U587d2IZqVYHuWy3hjsVfk3I1Ed30BRJCG/iDRlvAs/tLZOpR4yNRnq9/NRXX9d9eDE/iVXiC88zJSCka/qmJVBLseT1dqpXnIboOZEBdX8roOsCacYGYYvFJy1f5HugP+pGqhR4XohtV8RWf3xogn6g61T70O3XSr0EBAoe1G1WLeKDsrIwMjtODrEps9sHKhnaQ9SnS42k=" noCertificado="00001000000202578360" formaDePago="PAGO EN UNA SOLA EXHIBICION" sello="GKLjwstn1pzxxf3FCMDMAt4MeaE6QdmJ+4B+FawQMmdrOUaQhNnFUR70PFnKcZqXVHteU7DBU0IcXIO4ebjd+aOf+UYcnrdITdyVJ5J+EgHfNDwHryj8L3ibeO0AuGfPPow+gZK6puFgaBfl9krs+Q9wlH/ABNzHAIvac1l167U=" fecha="2016-12-05T10:00:55" folio="370087" serie="A" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.buzonfiscal.com/ns/addenda/bf/2 http://www.buzonfiscal.com/schema/xsd/Addenda_BF_v20.xsd">
+  <cfdi:Emisor nombre="GRUPO MEXICANO DE SEGUROS,S.A. DE C.V." rfc="GMS971110BTA">
+    <cfdi:DomicilioFiscal codigoPostal="01050" pais="MEXICO" estado="D.F." municipio="ALVARO OBREGON" colonia="EX HACIENDA DE GUADALUPE CHIMALISTAC" noInterior="EDIFICIO GMX" noExterior="412" calle="TECOYOTITLA" />
+    <cfdi:ExpedidoEn codigoPostal="72180" pais="MEXICO" estado="PUEBLA" municipio="PUEBLA" colonia="BELISARIO DOMINGUEZ" noExterior="1914" calle="ROSENDO MARQUEZ" />
+    <cfdi:RegimenFiscal Regimen="REGIMEN GENERAL DE LEY PERSONAS MORALES" />
+  </cfdi:Emisor>
+  <cfdi:Receptor nombre="EURO BLANC ,S.A. de C.V." rfc="EBL090303EZ3">
+    <cfdi:Domicilio codigoPostal="72370" pais="MEXICO" estado="PUEBLA" municipio="PUEBLA" colonia="HUMBOLDT" noExterior="NO. 815 A" calle="32 NORTE BIS" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto importe="12328.77" valorUnitario="12328.77" descripcion="PRIMA NETA" unidad="NA" cantidad="1.00" />
+    <cfdi:Concepto importe="0.00" valorUnitario="0.00" descripcion="RECARGOS" unidad="NA" cantidad="1.00" />
+    <cfdi:Concepto importe="0.00" valorUnitario="0.00" descripcion="DERECHOS" unidad="NA" cantidad="1.00" />
+    <cfdi:Concepto importe="0.00" valorUnitario="0.00" descripcion="DESC. ART. 41" unidad="NA" cantidad="1.00" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="1972.60">
+    <cfdi:Traslados>
+      <cfdi:Traslado importe="1972.60" tasa="16.00" impuesto="IVA" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigital.xsd" selloSAT="Td3YiX1i6QqIF3uHxeJXJrd2/20PuIxrkEi1RjWZ/oDytn1qujT9bYfEHwxnOmI0j83vO97ypGypXTXPRPmL1PgLW+Cdcmh3etmJPWcRd1OJL4y0z9yitNcsS/Au7j9GPsS1k+u83udhj0ueK4HDvnBy0CNaYzGm3AvacDvumj8=" noCertificadoSAT="00001000000202693892" selloCFD="GKLjwstn1pzxxf3FCMDMAt4MeaE6QdmJ+4B+FawQMmdrOUaQhNnFUR70PFnKcZqXVHteU7DBU0IcXIO4ebjd+aOf+UYcnrdITdyVJ5J+EgHfNDwHryj8L3ibeO0AuGfPPow+gZK6puFgaBfl9krs+Q9wlH/ABNzHAIvac1l167U=" FechaTimbrado="2016-12-05T10:00:55" UUID="a7ed66af-d4c4-4a92-be0f-05c86fe62311" version="1.0" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>
+

@@ -709,7 +709,7 @@
                         var error = data.Respuesta.Error;
                         var id = data.Contribuyente.Identificador;
                         if (error) {
-                            alert(error);
+                            console.log(error);
                             that.descargar_sat_form = true;
                         }
                         //Si no hay error se procede a comprobar el estadod e la solicitud
@@ -717,7 +717,7 @@
                             if (id) {
                                 //Esperamos para darle chance al web service de procesar la solicitud
                                 setTimeout(function() {
-                                    that.$http.get('/consulta?id=' + id).then(function(response_consulta){
+                                    that.$http.get('/consulta?id=' + id + '&rfc=' + that.rfc_cliente).then(function(response_consulta){
                                         if (response_consulta.status == 200) {
                                             var data = JSON.parse(response_consulta.data);
                                             if (data.Solicitud.Error.Numero == 0) {

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cfdi:Comprobante xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" NumCtaPago="0000" LugarExpedicion="CUAUHTEMOC, CIUDAD DE MÉXICO" tipoDeComprobante="ingreso" metodoDePago="03" total="1906343.15" Moneda="M.N." TipoCambio="1.00" descuento="0.00" subTotal="1643399.27" condicionesDePago="CONTADO" certificado="MIIEcDCCA1igAwIBAgIUMDAwMDEwMDAwMDAzMDU0NDE3NTkwDQYJKoZIhvcNAQEFBQAwggGKMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMR8wHQYJKoZIhvcNAQkBFhBhY29kc0BzYXQuZ29iLm14MSYwJAYDVQQJDB1Bdi4gSGlkYWxnbyA3NywgQ29sLiBHdWVycmVybzEOMAwGA1UEEQwFMDYzMDAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBEaXN0cml0byBGZWRlcmFsMRQwEgYDVQQHDAtDdWF1aHTDqW1vYzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTUwMwYJKoZIhvcNAQkCDCZSZXNwb25zYWJsZTogQ2xhdWRpYSBDb3ZhcnJ1YmlhcyBPY2hvYTAeFw0xNDExMDQyMjU1MzJaFw0xODExMDQyMjU1MzJaMIG8MSEwHwYDVQQDExhKSU5EQUxBSSBNRVhJQ08gU0EgREUgQ1YxITAfBgNVBCkTGEpJTkRBTEFJIE1FWElDTyBTQSBERSBDVjEhMB8GA1UEChMYSklOREFMQUkgTUVYSUNPIFNBIERFIENWMSUwIwYDVQQtExxKTUUxNDA2MjA3RjMgLyBST0NFNTYwMTEwNkUzMR4wHAYDVQQFExUgLyBST0NFNTYwMTEwSENMREhNMDUxCjAIBgNVBAsTATAwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAO4Ccj+IYMVO6LPfKg4jK6KHgSBsiHi5NOt7RLqNJEOvhn18CjVfHQFUhgNyYQ1ANK5SBv+UtOqYAiXkI3VE+VE3W6X10iMxqq60FEGggXzrMHf/5q7NJzPDvtGKZH/0C+FM3+FqZjMUEj+DkevF+aI93bsVPoBaesvj5Lu7BKYvAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBBQUAA4IBAQAAOfnI4O5yxZ1hHQbhUHAqsmgWr0kBgLUeR0YHtcx5d0OdqkCZkuYLbX8nUYA8TXhmXLfkITsiM5HBTfLy6+nnJv5+EkNdXHK4l1caTOs6CQwH0EhCTeAk4IL1E3dZJ/fEHAU0VEaA/YRsHJwlUt9CdHYdyHODk0PX7WVLAcu7C0SkccRo5HABb0cLqc/1J1IfUsG3yBf6wSodN8n1BgEvu+SM8o3B2Rdy0Nj5t/PMJmDbs7PYygPhbbmTF0wSM+YXczFmby4powDqVARZeIGSo/HKz/TY9G/8BOIQsDbbFGOEq0dlEckMnFXtNbb3F8WpgVy3arb5o3ldX+9ubYnI" noCertificado="00001000000305441759" formaDePago="Pago en una sola exhibición" sello="XBd+dIOdIdGtErHkIGeVW+HaeuUBSHUVfmnR+ZZFRV4mNxCMk4RUFgFufjgEtyegSGEtT8DT0HVivO9ynJJpbRFzgMK6BaUr6+EQvXjQlCPxCHsIn4Qju7pREtp3a26C7NmdDeX+ml3bBMuAdyOUbnxKM6AtyVn+MSL9lNJaXjA=" fecha="2016-12-30T15:48:48" folio="6358" serie="A" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3  http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd">
+    <cfdi:Emisor nombre="JINDALAI MEXICO S.A. DE C.V." rfc="JME1406207F3">
+        <cfdi:DomicilioFiscal codigoPostal="06600" pais="MEXICO" estado="CIUDAD DE MÉXICO" municipio="CUAUHTEMOC" colonia="JUAREZ" noInterior="DEPTO. 501" noExterior="39 PISO 5" calle="FLORENCIA" />
+        <cfdi:RegimenFiscal Regimen="Règimen general de ley personas morales." />
+    </cfdi:Emisor>
+    <cfdi:Receptor nombre="EURO BLANC SA DE CV" rfc="EBL090303EZ3">
+        <cfdi:Domicilio codigoPostal="72370" pais="MEXICO" estado="PUEBLA" municipio="PUEBLA" colonia="HUMBOLDT NORTE" calle="32 NORTE BIS 815 A" />
+    </cfdi:Receptor>
+    <cfdi:Conceptos>
+        <cfdi:Concepto importe="1247356.2766" valorUnitario="4.808176" descripcion="6003639-1" unidad="M2" cantidad="259424.00" />
+        <cfdi:Concepto importe="396042.9912" valorUnitario="4.240623" descripcion="6003639-2" unidad="M2" cantidad="93392.64" />
+    </cfdi:Conceptos>
+    <cfdi:Impuestos totalImpuestosTrasladados="262943.88">
+        <cfdi:Traslados>
+            <cfdi:Traslado importe="262943.88" tasa="16.00" impuesto="IVA" />
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+    <cfdi:Complemento>
+        <tfd:TimbreFiscalDigital FechaTimbrado="2016-12-30T15:53:08" UUID="353d75cb-065e-4eb9-ba3d-f86dc11ee132" noCertificadoSAT="00001000000300171291" selloCFD="XBd+dIOdIdGtErHkIGeVW+HaeuUBSHUVfmnR+ZZFRV4mNxCMk4RUFgFufjgEtyegSGEtT8DT0HVivO9ynJJpbRFzgMK6BaUr6+EQvXjQlCPxCHsIn4Qju7pREtp3a26C7NmdDeX+ml3bBMuAdyOUbnxKM6AtyVn+MSL9lNJaXjA=" selloSAT="FkaLV3j4kb7Xq9PW614FtGeRWSAc2NyPc64YDx6nsWwndYGIhS0tYKi6qtAyJBoR3jaQ5+HgG832R9PqAygg4V76iopuQIGzfezrGI3R5ox9xHrnvwFAoOuwSM1va1+ShIwWf3fMcXS+2oV5VsK8c0xqSl1cUnvOcKc9wktKZPQ=" version="1.0" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd" />
+    </cfdi:Complemento>
+</cfdi:Comprobante>
