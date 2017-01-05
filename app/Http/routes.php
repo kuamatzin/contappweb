@@ -114,11 +114,11 @@ Route::get('/consulta', function(){
 
 //Aqui guarda cuando la petición es completada
 Route::post('comprobar', function(Request $request){
+    
     $peticion = new RequestApp;
     $peticion->request = $request->all();
     $peticion->save();
     $json = json_decode($peticion->request['data']);
-    //SI EN LA RESPUESTA HAY 0 FACTURAS
     if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
         $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
         //$client = new Client(new Version1X('http://localhost:3000'));
@@ -189,7 +189,7 @@ Route::post('comprobar', function(Request $request){
             }
             //Verificar si ya esta en la base de datos
             if (Factura::existe($uuid)->count() == 0) {
-                $factura = XML::createFactura($xml, $name, $cliente_id, $fecha);
+                $factura = XML::createFactura($xml, $name, $cliente_id, $fecha, $key);
                 
                 if ($factura['rfcDeEmisor'] == $rfc) {
                     //Factura emitida
@@ -220,12 +220,12 @@ Route::post('comprobar', function(Request $request){
     }
     //3. RUN FUNCTION FOR CREATE FACTURAS
     //SEND TO SOCKET TO SEND TO THE CLIENT THE DOWNLOAD HAS FINISHED
-    $peticion = RequestApp::all()->last();
     $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
     //$client = new Client(new Version1X('http://localhost:3000'));
     $client->initialize();
     $client->emit('new', ['data' => $peticion->request]);
     $client->close();
+
 });
 
 Route::get('request', function(){
