@@ -114,7 +114,6 @@ Route::get('/consulta', function(){
 
 //Aqui guarda cuando la petición es completada
 Route::post('comprobar', function(Request $request){
-    
     $peticion = new RequestApp;
     $peticion->request = $request->all();
     $peticion->save();
