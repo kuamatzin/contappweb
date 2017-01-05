@@ -119,7 +119,6 @@ Route::post('comprobar', function(Request $request){
     $peticion->save();
     $json = json_decode($peticion->request['data']);
     //SI EN LA RESPUESTA HAY 0 FACTURAS
-    
     if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
         $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
         //$client = new Client(new Version1X('http://localhost:3000'));
