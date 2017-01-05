@@ -549,12 +549,14 @@
     //var socket = io.connect("http://localhost:3000");
 
     socket.on('saludo', function(msg){
-        console.log(msg.data)
+        alert("HOLA");
+        //console.log(msg.data)
         var data = JSON.parse(msg.data.data);
-        console.log(data)
+        //console.log(data)
         console.log(data.Contribuyente.Identificador)
         vm.descargar_sat_form = true,
         vm.descargar_sat_text = false
+        console.log(vm.identificador)
         if (vm.identificador == data.Contribuyente.Identificador) {
             swal("Solicitud completada");
         }
@@ -717,7 +719,6 @@
                 };
                 this.$http.post('/descargar', data).then(function(response){
                     that.descargar_sat_form = false;
-                    console.log("JASPLAS")
                     //Respuesta exitosa
                     if (response.status == 200) {
                         var data = JSON.parse(response.data);
