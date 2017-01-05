@@ -32,7 +32,7 @@ Route::get('/', function () {
 Route::post('/descargar', function(Request $request){
     header('Content-type: text/html; charset=utf-8');
 
-    $filename = 'ejemplo.txt';
+    $filename = ($request->tipo_consulta == 'Emitidos') ? 'emitidas.txt' : 'rexibidas.txt';
 
     $jsonText = file_get_contents($filename);
 
@@ -47,8 +47,15 @@ Route::post('/descargar', function(Request $request){
     //$json->{"Contribuyente"}->{'ClaveCiec'} = '11235813';
     $json->{"Contribuyente"}->{'Rfc'} = $request->rfc;
     $json->{"Contribuyente"}->{'ClaveCiec'} = $request->password;
-    $json->{'FiltradoRangoRecibidos'}->{'Anio'} = $request->anio;
-    $json->{'FiltradoRangoRecibidos'}->{'Mes'} = $request->mes;
+    if ($request->tipo_consulta == 'Emitidos') {
+        $json->{'FiltradoRangoEmitidos'}->{'FechaInicial'} = $request->anio . '-' . $request->mes . '-1 00:00:00';
+        $json->{'FiltradoRangoEmitidos'}->{'FechaFinal'} = $request->anio . '-' . $request->mes . '-' . cal_days_in_month(CAL_GREGORIAN, $request->mes, $request->anio)  . ' 23:59:59';
+    }
+    else {
+        $json->{'FiltradoRangoRecibidos'}->{'Anio'} = $request->anio;
+        $json->{'FiltradoRangoRecibidos'}->{'Mes'} = $request->mes;
+    }
+    
     $json->{'Configuracion'}->{'TipoConsulta'} = $request->tipo_consulta;
 
     $post['data'] = json_encode($json);
@@ -111,6 +118,15 @@ Route::post('comprobar', function(Request $request){
     $peticion->request = $request->all();
     $peticion->save();
     $json = json_decode($peticion->request['data']);
+    //SI EN LA RESPUESTA HAY 0 FACTURAS
+    if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
+        $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
+        //$client = new Client(new Version1X('http://localhost:3000'));
+        $client->initialize();
+        $client->emit('no_documents', ['data' => $peticion->request]);
+        $client->close();
+        return 0;
+    }
     //1. DOWNLOAD THE FILE
     $link_download = $json->Solicitud->Resumen->Archivo;
     $password = $json->Solicitud->Resumen->Password;
@@ -215,7 +231,14 @@ Route::post('comprobar', function(Request $request){
 Route::get('request', function(){
     $peticion = RequestApp::all()->last();
     $json = json_decode($peticion->request['data']);
-
+    if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
+        $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
+        //$client = new Client(new Version1X('http://localhost:3000'));
+        $client->initialize();
+        $client->emit('no_documents', ['data' => $peticion->request]);
+        $client->close();
+        return 0;
+    }
     //1. DOWNLOAD THE FILE
     $link_download = $json->Solicitud->Resumen->Archivo;
     $password = $json->Solicitud->Resumen->Password;

@@ -1,0 +1,28 @@
+{
+  "Version": "1.0",
+  "Contribuyente": {
+    "Rfc": "",
+    "ClaveCiec": ""
+  },
+  "Configuracion": {
+    "TipoConsulta": "Emitidos",
+    "TipoProceso": "Descarga",
+    "TipoArchivo": "Todos",
+    "UrlNotificacion": "http://www.contapp.inovuz.com/comprobar",
+    "EmailNotificacion": "kuamatzin@gmail.com"
+  },
+  "Reporte": {
+    "TipoReporte": "Excel",
+    "NombreReporte": "Resultado"
+  },
+  "FiltradoRangoEmitidos": {
+    "FechaInicial": "2015-10-1 00:00:00",
+    "FechaFinal": "2015-10-1 23:59:59",
+    "EstadoComprobante": "Todos",
+    "ClaveComplemento": "00"
+  },
+  "Archivos": {
+    "NombreDirectorio": "[ANIO_EMISION]-[MES_EMISION]",
+    "NombreArchivo": "[RFC_EMISOR]-[RFC_RECEPTOR]-[UUID]"
+  }
+}

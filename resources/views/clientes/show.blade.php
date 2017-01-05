@@ -555,7 +555,22 @@
         console.log(data.Contribuyente.Identificador)
         vm.descargar_sat_form = true,
         vm.descargar_sat_text = false
-        swal("Solicitud completada");
+        if (vm.identificador == data.Contribuyente.Identificador) {
+            swal("Solicitud completada");
+        }
+    });
+
+    socket.on('no_docs', function(msg){
+        //console.log(msg.data)
+        var data = JSON.parse(msg.data.data);
+        //console.log(data)
+        console.log(data.Contribuyente.Identificador)
+        console.log(vm.identificador)
+        vm.descargar_sat_form = true,
+        vm.descargar_sat_text = false
+        if (vm.identificador == data.Contribuyente.Identificador) {
+            swal("No se encontraron facturas");
+        }
     });
 
     Dropzone.options.facturas = {
@@ -591,7 +606,8 @@
             end: moment().format('YYYY-MM-DD'),
             detalle_factura: '',
             descargar_sat_form: true,
-            descargar_sat_text: false
+            descargar_sat_text: false,
+            identificador: ''
         },
         ready: function(){
             
@@ -708,6 +724,7 @@
                         var status = data.Respuesta.Status;
                         var error = data.Respuesta.Error;
                         var id = data.Contribuyente.Identificador;
+                        that.identificador = id;
                         if (error) {
                             console.log(error);
                             that.descargar_sat_form = true;
