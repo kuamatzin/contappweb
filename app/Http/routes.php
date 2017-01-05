@@ -32,7 +32,7 @@ Route::get('/', function () {
 Route::post('/descargar', function(Request $request){
     header('Content-type: text/html; charset=utf-8');
 
-    $filename = ($request->tipo_consulta == 'Emitidos') ? 'emitidas.txt' : 'rexibidas.txt';
+    $filename = ($request->tipo_consulta == 'Emitidos') ? 'emitidas.txt' : 'recibidas.txt';
 
     $jsonText = file_get_contents($filename);
 
