@@ -384,6 +384,7 @@ Route::post('/request', function(Request $request){
     $client->emit('new', ['data' => $peticion->request]);
     $client->close();
 
+    return "Factutas almacenandas correctamente";
 });
 
 Route::get('testSocket', function(){
