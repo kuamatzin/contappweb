@@ -551,7 +551,7 @@
     socket.on('saludo', function(msg){
         //console.log(msg.data)
         var data = JSON.parse(msg.data.data);
-        //console.log(data)
+        console.log(data)
         console.log(data.Contribuyente.Identificador)
         vm.descargar_sat_form = true,
         vm.descargar_sat_text = false
