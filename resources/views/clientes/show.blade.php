@@ -684,7 +684,7 @@
                 });
             },
             busquedaFacturas: function(){
-                that.facturas = '';
+                this.facturas = '';
                 this.loader = true;
                 var that = this;
                 this.$http.get('/facturas/busquedaFacturas/' + this.cliente_id + '?ejercicio_fiscal=' + this.ejercicio_fiscal + '&mes=' + this.mes + '&rfcBusqueda=' + this.rfcBusqueda + '&tipo=' + this.tipo + '&comprobante=' + this.comprobante + '&excel=0').then(function(facturas){
