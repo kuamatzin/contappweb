@@ -537,6 +537,7 @@
     //var socket = io.connect("http://localhost:3000");
     
     socket.on('peticion_completada', function(msg){
+        console.log("Entro a peticion completada")
         if (vm.identificador == data.Contribuyente.Identificador) {
             swal({
               title: "Descarga Completada",
@@ -547,6 +548,7 @@
     });
 
     socket.on('saludo', function(msg){
+        console.log("Solicitud completada")
         vm.descargar_sat_form = true,
         vm.descargar_sat_text = false
         if (vm.identificador == data.Contribuyente.Identificador) {
@@ -555,7 +557,7 @@
     });
 
     socket.on('no_docs', function(msg){
-        //console.log(msg.data)
+        console.log("No hay resultados")
         var data = JSON.parse(msg.data.data);
         //console.log(data)
         console.log(data.Contribuyente.Identificador)
