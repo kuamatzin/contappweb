@@ -134,12 +134,6 @@ Route::post('/comprobar', function(Request $request){
     $peticion->request = $info;
     $peticion->save();
 
-    $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
-    //$client = new Client(new Version1X('http://localhost:3000'));
-    $client->initialize();
-    $client->emit('request_updated', ['data' => $info]);
-    $client->close();
-
     if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
         $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
         //$client = new Client(new Version1X('http://localhost:3000'));
@@ -148,6 +142,15 @@ Route::post('/comprobar', function(Request $request){
         $client->close();
         return 0;
     }
+
+    $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
+    //$client = new Client(new Version1X('http://localhost:3000'));
+    $client->initialize();
+    $client->emit('request_updated', ['data' => $info]);
+    $client->close();
+
+    return 0;
+
     //1. DOWNLOAD THE FILE
     $link_download = $json->Solicitud->Resumen->Archivo;
     $password = $json->Solicitud->Resumen->Password;
@@ -253,13 +256,21 @@ Route::post('/comprobar', function(Request $request){
     $client->close();
 });
 
-Route::get('/request', function(){
+Route::post('/request', function(Request $request){
+
+    //Ocupar esto cuando se desean hacer pruebas. CAMBIAR METODO A GET
+    /*
     $peticion = RequestApp::all()->last();
     $json = json_decode($peticion->request['data']);
     $identificador = $json->Contribuyente->Identificador;
     $peticion = RequestApp::where('identificador', $identificador)->first();
     $json = json_decode($peticion->request['data']);
-    dd($json);
+    */
+
+    //Para hacer la petición de descarga y guardado de facturas
+    $peticion = RequestApp::where('identificador', $request->identificador);
+    $json = json_decode($peticion->request['data']);
+    
     if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
         $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
         //$client = new Client(new Version1X('http://localhost:3000'));
@@ -268,6 +279,7 @@ Route::get('/request', function(){
         $client->close();
         return 0;
     }
+
     //1. DOWNLOAD THE FILE
     $link_download = $json->Solicitud->Resumen->Archivo;
     $password = $json->Solicitud->Resumen->Password;
@@ -309,6 +321,10 @@ Route::get('/request', function(){
     //3. VERIFY IF THE SERVER HAS ALREADY THE XML IF SO THEN VERIFY IF THE STATUS HAS CHANGED
     $files = File::allFiles(public_path() . "/descargas/$identificador/");
     foreach ($files as $key => $file) {
+        //Han pasado más de 100 facturas, se debe poner un timer para que descanse el servidor Dreamhost
+        if ($key % 100 == 0){
+            usleep(10000000);
+        }
         $extension = File::extension($file->getFilename());
         if ($extension == 'xml') {
             $contents = File::get($file);
@@ -352,6 +368,7 @@ Route::get('/request', function(){
                 //Agregar nueva factura
                 //Guardamos en el sistema de archivos del servidor
                 Storage::move("/descargas/$identificador/$fecha_folder" . $nombre_original, "/facturas_clientes/$name");
+                usleep(300000);
                 //$file->move('facturas_clientes', $name);
             }
             else {
@@ -366,6 +383,7 @@ Route::get('/request', function(){
     $client->initialize();
     $client->emit('new', ['data' => $peticion->request]);
     $client->close();
+
 });
 
 Route::get('testSocket', function(){

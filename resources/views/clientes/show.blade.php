@@ -545,8 +545,9 @@
         var vigentes = data.Solicitud.Resumen.Resultado.Vigentes;
         var cancelados = data.Solicitud.Resumen.Resultado.Cancelados;
         var acuses = data.Solicitud.Resumen.Resultado.Acuses;
-        vm.descargar_sat_form = true,
-        vm.descargar_sat_text = false
+        vm.descargar_sat_form = true;
+        vm.descargar_sat_text = false;
+        vm.almacenar_facturas(vm.identificador);
         if (vm.identificador == data.Contribuyente.Identificador) {
             swal({
               title: "Descarga Completada",
@@ -794,6 +795,16 @@
                 this.$http.post('/store_request', data).then(function(response){
                     //Respuesta exitosa
                     if (response.status == 200) {
+                    }
+                }, function(error){
+
+                });
+            },
+            almacenar_facturas: function(identificador){
+                console.log("Voy a hacer petición para guardar facturas: " + identificador);
+                this.$http.post('/request', {identificador: identificador}).then(function(response){
+                    if (response.status == 200) {
+                        console.log("YEI");
                     }
                 }, function(error){
 
