@@ -210,6 +210,7 @@ Route::post('comprobar', function(Request $request){
                 //Agregar nueva factura
                 //Guardamos en el sistema de archivos del servidor
                 Storage::move("/descargas/$identificador/$fecha_folder" . $nombre_original, "/facturas_clientes/$name");
+                usleep(300000);
                 //$file->move('facturas_clientes', $name);
             }
             else {

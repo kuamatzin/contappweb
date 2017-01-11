@@ -549,7 +549,6 @@
     //var socket = io.connect("http://localhost:3000");
 
     socket.on('saludo', function(msg){
-        alert("HOLA");
         //console.log(msg.data)
         var data = JSON.parse(msg.data.data);
         //console.log(data)
