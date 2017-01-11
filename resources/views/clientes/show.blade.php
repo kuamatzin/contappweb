@@ -276,6 +276,7 @@
                 </table>
                 <br>
                 <h1 class="text-center" v-show="sin_resultados">Búsqueda sin resultados</h1>
+                <img src="http://cdn.liveonlineservices.com/upload/img/loading1.gif" width="130px" class="img-responsive center-block" v-show="loader">
                 <br>
             </div>
         </div>
@@ -554,12 +555,19 @@
     });
 
     socket.on('saludo', function(msg){
-        console.log("Solicitud completada")
+        console.log("Entro a peticion completada")
         var data = JSON.parse(msg.data.data);
-        vm.descargar_sat_form = true,
-        vm.descargar_sat_text = false
+        var descargas = data.Solicitud.Resumen.Resultado.Descargados;
+        var documentos = data.Solicitud.Resumen.Resultado.Documentos;
+        var vigentes = data.Solicitud.Resumen.Resultado.Vigentes;
+        var cancelados = data.Solicitud.Resumen.Resultado.Cancelados;
+        var acuses = data.Solicitud.Resumen.Resultado.Acuses;
         if (vm.identificador == data.Contribuyente.Identificador) {
-            swal("Solicitud Completada, información almacenanda");
+            swal({
+              title: "¡Descarga Completada!",
+              text: "<p><strong>Documentos: " + documentos + "</strong></p>" + "<p><strong>Descargados: " + descargas + "</strong></p>" + "<p><strong>Acuses: " + acuses + "</strong></p>" + "<p><strong>Cancelados: " + cancelados + "</strong></p>" + "<p><strong>Vigentes: " + vigentes + "</strong></p><br><h3>Solicitud completada, información almacenanda</h3>",
+              html: true
+            });
         }
     });
 
@@ -611,7 +619,8 @@
             descargar_sat_form: true,
             descargar_sat_text: false,
             identificador: '',
-            sin_resultados: false
+            sin_resultados: false,
+            loader: false
         },
         ready: function(){
             
@@ -675,15 +684,18 @@
                 });
             },
             busquedaFacturas: function(){
+                this.loader = true;
                 var that = this;
                 this.$http.get('/facturas/busquedaFacturas/' + this.cliente_id + '?ejercicio_fiscal=' + this.ejercicio_fiscal + '&mes=' + this.mes + '&rfcBusqueda=' + this.rfcBusqueda + '&tipo=' + this.tipo + '&comprobante=' + this.comprobante + '&excel=0').then(function(facturas){
                     if (facturas.data.length == 0) {
                         that.facturas = '';
+                        that.loader = false;
                         that.sin_resultados = true;
                     } 
                     else {
-                        that.facturas = facturas.data;
+                        that.loader = false;
                         that.sin_resultados = false;
+                        that.facturas = facturas.data;
                     }
                 }, function(error){
                     console.log(error)
