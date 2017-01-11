@@ -268,7 +268,7 @@ Route::post('/request', function(Request $request){
     */
 
     //Para hacer la petición de descarga y guardado de facturas
-    $peticion = RequestApp::where('identificador', $request->identificador);
+    $peticion = RequestApp::where('identificador', $request->identificador)->first();
     $json = json_decode($peticion->request['data']);
     
     if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
