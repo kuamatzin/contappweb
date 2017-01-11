@@ -39,7 +39,7 @@
                         <td>{{$cliente->nombre}}</td>
                         <td>{{$cliente->rfc}}</td>
                         <td>
-                            <a href="clientes/{{$cliente->id}}">
+                            <a href="/clientes/{{$cliente->id}}">
                                 <button type="button" class="btn btn-primary">Administrar <i class="fa fa-pencil" aria-hidden="true"></i></button>
                             </a>
                         </td>

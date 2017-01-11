@@ -289,6 +289,9 @@
                         </tr>
                     </tbody>
                 </table>
+                <br>
+                <h1 class="text-center" v-show="sin_resultados">Búsqueda sin resultados</h1>
+                <br>
             </div>
         </div>
     </div>
@@ -614,7 +617,8 @@
             detalle_factura: '',
             descargar_sat_form: true,
             descargar_sat_text: false,
-            identificador: ''
+            identificador: '',
+            sin_resultados: false
         },
         ready: function(){
             
@@ -680,8 +684,14 @@
             busquedaFacturas: function(){
                 var that = this;
                 this.$http.get('/facturas/busquedaFacturas/' + this.cliente_id + '?ejercicio_fiscal=' + this.ejercicio_fiscal + '&mes=' + this.mes + '&rfcBusqueda=' + this.rfcBusqueda + '&tipo=' + this.tipo + '&comprobante=' + this.comprobante + '&excel=0').then(function(facturas){
-                    console.log(facturas.data[0].conceptos)
-                    that.facturas = facturas.data;
+                    if (facturas.data.length == 0) {
+                        that.facturas = '';
+                        that.sin_resultados = true;
+                    } 
+                    else {
+                        that.facturas = facturas.data;
+                        that.sin_resultados = false;
+                    }
                 }, function(error){
                     console.log(error)
                 });
