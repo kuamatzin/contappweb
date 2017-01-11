@@ -551,13 +551,19 @@
     socket.on('saludo', function(msg){
         //console.log(msg.data)
         var data = JSON.parse(msg.data.data);
-        console.log(data)
-        console.log(data.Contribuyente.Identificador)
+        var descargas = data.Solicitud.Resumen.Resultado.Descargados;
+        var documentos = data.Solicitud.Resumen.Resultado.Documentos;
+        var vigentes = data.Solicitud.Resumen.Resultado.Vigentes;
+        var cancelados = data.Solicitud.Resumen.Resultado.Cancelados;
+        var acuses = data.Solicitud.Resumen.Resultado.Acuses;
         vm.descargar_sat_form = true,
         vm.descargar_sat_text = false
-        console.log(vm.identificador)
         if (vm.identificador == data.Contribuyente.Identificador) {
-            swal("Solicitud completada");
+            swal({
+              title: "Solicitud Completada",
+              text: "<p>Documentos: " + documentos + "</p>" + "<p>Descargados: " + descargas + "</p>" + "<p>Acuses: " + acuses + "</p>" + "<p>Cancelados: " + cancelados + "</p>" + "<p>Vigentes: " + vigentes + "</p>",
+              html: true
+            });
         }
     });
 
