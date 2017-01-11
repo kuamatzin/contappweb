@@ -538,6 +538,7 @@
     
     socket.on('peticion_completada', function(msg){
         console.log("Entro a peticion completada")
+        var data = JSON.parse(msg.data.data);
         if (vm.identificador == data.Contribuyente.Identificador) {
             swal({
               title: "Descarga Completada",
@@ -549,6 +550,7 @@
 
     socket.on('saludo', function(msg){
         console.log("Solicitud completada")
+        var data = JSON.parse(msg.data.data);
         vm.descargar_sat_form = true,
         vm.descargar_sat_text = false
         if (vm.identificador == data.Contribuyente.Identificador) {
