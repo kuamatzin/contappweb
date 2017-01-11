@@ -535,23 +535,22 @@
 
     var socket = io.connect("https://calm-plateau-72045.herokuapp.com");
     //var socket = io.connect("http://localhost:3000");
+    
+    socket.on('peticion_completada', function(msg){
+        if (vm.identificador == data.Contribuyente.Identificador) {
+            swal({
+              title: "Descarga Completada",
+              text: "<p><strong>Documentos: " + documentos + "</strong></p>" + "<p><strong>Descargados: " + descargas + "</strong></p>" + "<p><strong>Acuses: " + acuses + "</strong></p>" + "<p><strong>Cancelados: " + cancelados + "</strong></p>" + "<p><strong>Vigentes: " + vigentes + "</strong></p><br><h3>Estamos guardando la información en tu cuenta... Esto puede tardar unos minutos</h3>",
+              html: true
+            });
+        }
+    });
 
     socket.on('saludo', function(msg){
-        //console.log(msg.data)
-        var data = JSON.parse(msg.data.data);
-        var descargas = data.Solicitud.Resumen.Resultado.Descargados;
-        var documentos = data.Solicitud.Resumen.Resultado.Documentos;
-        var vigentes = data.Solicitud.Resumen.Resultado.Vigentes;
-        var cancelados = data.Solicitud.Resumen.Resultado.Cancelados;
-        var acuses = data.Solicitud.Resumen.Resultado.Acuses;
         vm.descargar_sat_form = true,
         vm.descargar_sat_text = false
         if (vm.identificador == data.Contribuyente.Identificador) {
-            swal({
-              title: "Solicitud Completada",
-              text: "<p><strong>Documentos: " + documentos + "</strong></p>" + "<p><strong>Descargados: " + descargas + "</strong></p>" + "<p><strong>Acuses: " + acuses + "</strong></p>" + "<p><strong>Cancelados: " + cancelados + "</strong></p>" + "<p><strong>Vigentes: " + vigentes + "</strong></p>",
-              html: true
-            });
+            swal("Solicitud Completada, información almacenanda");
         }
     });
 

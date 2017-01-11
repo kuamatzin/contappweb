@@ -131,10 +131,15 @@ Route::post('/comprobar', function(Request $request){
     $json = json_decode($info['data']);
     $identificador = $json->Contribuyente->Identificador;
     $peticion = RequestApp::where('identificador', $identificador)->first();
-    $peticion->request = $request->all();
+    $peticion->request = $info;
     $peticion->save();
-    
-    $json = json_decode($peticion->request['data']);
+
+    $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
+    //$client = new Client(new Version1X('http://localhost:3000'));
+    $client->initialize();
+    $client->emit('request_updated', ['data' => $info]);
+    $client->close();
+
     if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
         $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
         //$client = new Client(new Version1X('http://localhost:3000'));
