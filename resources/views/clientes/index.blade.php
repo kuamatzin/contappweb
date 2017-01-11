@@ -9,7 +9,7 @@
                         <li>
                             <div class="listrap-toggle">
                                 <span></span>
-                                <img src="http://image.flaticon.com/icons/svg/123/123415.svg" class="img-circle" />
+                                <img src="http://www.vandelaydesign.com/wp-content/uploads/09-free-resources-flat-design.jpg" width="50px" class="img-circle" />
                             </div>
                             <strong>Mis clientes</strong>
                             <a href="/clientes/create" class="pull-right">
