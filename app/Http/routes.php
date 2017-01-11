@@ -112,11 +112,28 @@ Route::get('/consulta', function(){
     return $respuesta;
 });
 
-//Aqui guarda cuando la petición es completada
-Route::post('comprobar', function(Request $request){
+Route::post('store_request', function(Request $request){
     $peticion = new RequestApp;
+    $peticion->cliente_id = $request->cliente_id;
+    $peticion->ejercicio_fiscal = $request->anio;
+    $peticion->mes = $request->mes;
+    $peticion->tipo_consulta = $request->tipo_consulta;
+    $peticion->identificador = $request->identificador;
+    $peticion->save();
+
+    return "Exito";
+});
+
+
+//Aqui guarda cuando la petición es completada
+Route::post('/comprobar', function(Request $request){
+    $info = $request->all();
+    $json = json_decode($info['data']);
+    $identificador = $json->Contribuyente->Identificador;
+    $peticion = RequestApp::where('identificador', $identificador)->first();
     $peticion->request = $request->all();
     $peticion->save();
+    
     $json = json_decode($peticion->request['data']);
     if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
         $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
@@ -231,9 +248,13 @@ Route::post('comprobar', function(Request $request){
     $client->close();
 });
 
-Route::get('request', function(){
+Route::get('/request', function(){
     $peticion = RequestApp::all()->last();
     $json = json_decode($peticion->request['data']);
+    $identificador = $json->Contribuyente->Identificador;
+    $peticion = RequestApp::where('identificador', $identificador)->first();
+    $json = json_decode($peticion->request['data']);
+    dd($json);
     if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
         $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
         //$client = new Client(new Version1X('http://localhost:3000'));

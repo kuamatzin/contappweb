@@ -733,6 +733,8 @@
                         //Si no hay error se procede a comprobar el estadod e la solicitud
                         else {
                             if (id) {
+                                //Hacemos una nueva request en la base de datos
+                                that.store_request(id);
                                 //Esperamos para darle chance al web service de procesar la solicitud
                                 setTimeout(function() {
                                     that.$http.get('/consulta?id=' + id + '&rfc=' + that.rfc_cliente).then(function(response_consulta){
@@ -752,6 +754,23 @@
                                 }, 9000);
                             }
                         }
+                    }
+                }, function(error){
+
+                });
+            },
+            store_request: function(id){
+                var that = this;
+                var data = {
+                    anio: this.d_ejercicio_fiscal,
+                    mes: this.d_mes,
+                    tipo_consulta: this.d_consulta,
+                    cliente_id: this.cliente_id,
+                    identificador: id
+                };
+                this.$http.post('/store_request', data).then(function(response){
+                    //Respuesta exitosa
+                    if (response.status == 200) {
                     }
                 }, function(error){
 
