@@ -167,6 +167,10 @@ Route::post('comprobar', function(Request $request){
     //3. VERIFY IF THE SERVER HAS ALREADY THE XML IF SO THEN VERIFY IF THE STATUS HAS CHANGED
     $files = File::allFiles(public_path() . "/descargas/$identificador/");
     foreach ($files as $key => $file) {
+        //Han pasado más de 100 facturas, se debe poner un timer para que descanse el servidor Dreamhost
+        if ($key % 100 == 0){
+            usleep(10000000);
+        }
         $extension = File::extension($file->getFilename());
         if ($extension == 'xml') {
             $contents = File::get($file);
@@ -225,7 +229,6 @@ Route::post('comprobar', function(Request $request){
     $client->initialize();
     $client->emit('new', ['data' => $peticion->request]);
     $client->close();
-
 });
 
 Route::get('request', function(){

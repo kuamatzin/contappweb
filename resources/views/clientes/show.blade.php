@@ -561,7 +561,7 @@
         if (vm.identificador == data.Contribuyente.Identificador) {
             swal({
               title: "Solicitud Completada",
-              text: "<p>Documentos: " + documentos + "</p>" + "<p>Descargados: " + descargas + "</p>" + "<p>Acuses: " + acuses + "</p>" + "<p>Cancelados: " + cancelados + "</p>" + "<p>Vigentes: " + vigentes + "</p>",
+              text: "<p><strong>Documentos: " + documentos + "</strong></p>" + "<p><strong>Descargados: " + descargas + "</strong></p>" + "<p><strong>Acuses: " + acuses + "</strong></p>" + "<p><strong>Cancelados: " + cancelados + "</strong></p>" + "<p><strong>Vigentes: " + vigentes + "</strong></p>",
               html: true
             });
         }
