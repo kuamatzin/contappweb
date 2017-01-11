@@ -235,21 +235,6 @@
                 </div>
             </div>
             <hr>
-            <div class="container">
-                <div class="row">
-                       <div id="custom-search-input">
-                        <div class="input-group col-md-5">
-                            <input type="text" class="  search-query form-control" placeholder="Filtrar" />
-                            <span class="input-group-btn">
-                                <button class="btn btn-danger" type="button">
-                                    <span class=" glyphicon glyphicon-search"></span>
-                                </button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
