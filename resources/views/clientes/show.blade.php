@@ -539,6 +539,11 @@
     socket.on('peticion_completada', function(msg){
         console.log("Entro a peticion completada")
         var data = JSON.parse(msg.data.data);
+        var descargas = data.Solicitud.Resumen.Resultado.Descargados;
+        var documentos = data.Solicitud.Resumen.Resultado.Documentos;
+        var vigentes = data.Solicitud.Resumen.Resultado.Vigentes;
+        var cancelados = data.Solicitud.Resumen.Resultado.Cancelados;
+        var acuses = data.Solicitud.Resumen.Resultado.Acuses;
         if (vm.identificador == data.Contribuyente.Identificador) {
             swal({
               title: "Descarga Completada",
