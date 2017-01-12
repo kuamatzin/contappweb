@@ -256,7 +256,7 @@ Route::post('/comprobar', function(Request $request){
     $client->close();
 });
 
-Route::get('/request', function(Request $request){
+Route::get('/request', function(){
 
     //Ocupar esto cuando se desean hacer pruebas. CAMBIAR METODO A GET
     /*
@@ -268,7 +268,7 @@ Route::get('/request', function(Request $request){
     */
 
     //Para hacer la petición de descarga y guardado de facturas
-    $peticion = RequestApp::where('identificador', $request->identificador)->first();
+    $peticion = RequestApp::where('identificador', Input::get('identificador'))->first();
     $json = json_decode($peticion->request['data']);
     
     if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
