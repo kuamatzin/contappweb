@@ -128,8 +128,6 @@ Route::post('store_request', function(Request $request){
 //Aqui guarda cuando la petición es completada
 Route::post('/comprobar', 'FacturaController@webhook');
 
-Route::get('/request', 'FacturaController@guardarFacturas');
-
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
