@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd" version="3.2" serie="EA" folio="B1-16239795P1-3" fecha="2016-04-08T04:51:38" sello="Hj+O/zQn5wKcF/O5rViqAagD7TkwNdJ11KIxaCdF8k3l7OSQ4nhJm3/2QOdWL8JoXMWnrbj8vvwshN6XsxSEonAMwO6/nprdmdIVg87PqXlbpuIugvAim12M6qN5cejjS8AVtXdA0lV7FPzYJ7P9XcGXhNXSZKSxxS4EjTPXt5k=" formaDePago="Pago en una sola exhibicion" noCertificado="00001000000306033011" certificado="MIIEZjCCA06gAwIBAgIUMDAwMDEwMDAwMDAzMDYwMzMwMTEwDQYJKoZIhvcNAQEFBQAwggGKMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMR8wHQYJKoZIhvcNAQkBFhBhY29kc0BzYXQuZ29iLm14MSYwJAYDVQQJDB1Bdi4gSGlkYWxnbyA3NywgQ29sLiBHdWVycmVybzEOMAwGA1UEEQwFMDYzMDAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBEaXN0cml0byBGZWRlcmFsMRQwEgYDVQQHDAtDdWF1aHTDqW1vYzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTUwMwYJKoZIhvcNAQkCDCZSZXNwb25zYWJsZTogQ2xhdWRpYSBDb3ZhcnJ1YmlhcyBPY2hvYTAeFw0xNTAyMTAxNzIyMzBaFw0xOTAyMTAxNzIyMzBaMIGyMRwwGgYDVQQDExNFTkxBQ0UgVFBFIFNBIERFIENWMRwwGgYDVQQpExNFTkxBQ0UgVFBFIFNBIERFIENWMRwwGgYDVQQKExNFTkxBQ0UgVFBFIFNBIERFIENWMSUwIwYDVQQtExxFVFAxNTAxMjE2RUEgLyBaQUlKNzUwNzI5NjU0MR4wHAYDVQQFExUgLyBaQUlKNzUwNzI5SERGUk5TMDIxDzANBgNVBAsTBk1BVFJJWjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAllbTlrMdzW9zDCL9/JIsfnx00XQHD3QyfOq5b0WNdFkT8dGWCZEJnhnF8eEbEZq58v8/rGMcot87CSKHqWpJgBAcxwV3/UNIkEjM9T3C9HVX4QQCXJj6oPwxxbyHoo70q8ie/CLCOn4Jbw9v9qCWMkq08YRhP2ZSfs79wlzY3DECAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAKTSAKVwdkMBo7Mq1pzZLYuueRm9T6zMSv7FSI1Essr+zl5UBK3y715lC/qAr/Cj3DTC+acx9diAldz6zouy9RLgbI+TTS80NI+knH/Zmyl0lNaD1WS9bg6QX71SRLg4s+zUTlZsrEsqqY5PKmNNzcBwTMcyHRx5ydR7kK2BfhsEvECHg1ko01CuUn7wpWa9rBg3QLYCZoPwmChwQkIAC00jvqPtmBQcDa8ADnJ6TAj+ZXsrSwdZ8sXKfvLl48uEkp/Af2nHwCTYpJuMroxZNIA5+NXeaYDJz0j4JOXyv71xmFKEXTsW1dsijtJcBuqPfqNNRNL+UnyinI3VRDpvZIo=" subTotal="1506.89" Moneda="MXN" total="1747.99" tipoDeComprobante="ingreso" metodoDePago="NO IDENTIFICADO" LugarExpedicion="México, DF">
+  <cfdi:Emisor rfc="ETP1501216EA" nombre="ENLACE TPE SA DE CV">
+    <cfdi:DomicilioFiscal calle="PERIFERICO SUR" noExterior="4119" noInterior="TORRE A PISO 7" colonia="FUENTES DEL PEDREGAL" localidad="MÉXICO" municipio="TLALPAN" estado="DISTRITO FEDERAL" pais="MÉXICO" codigoPostal="14141" />
+    <cfdi:RegimenFiscal Regimen="Régimen General de Ley Personas Morales" />
+  </cfdi:Emisor>
+  <cfdi:Receptor rfc="EBL090303EZ3" nombre="EURO BLANC SA DE CV">
+    <cfdi:Domicilio calle="32 NORTE BIS 815 A" colonia="Humboldt Norte" localidad="Puebla" municipio="Puebla" estado="PB" pais="MX" codigoPostal="72370" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto cantidad="1" unidad="Servicio y/o renta" noIdentificacion="SERVICIO_ENLACE" descripcion="Servicio de Enlace" valorUnitario="1506.89" importe="1506.89" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="241.1">
+    <cfdi:Traslados>
+      <cfdi:Traslado impuesto="IVA" tasa="16" importe="241.1" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital version="1.0" UUID="79B7D7E9-8044-4BBF-8C48-34A3CB6B843C" FechaTimbrado="2016-04-08T04:53:43" selloCFD="Hj+O/zQn5wKcF/O5rViqAagD7TkwNdJ11KIxaCdF8k3l7OSQ4nhJm3/2QOdWL8JoXMWnrbj8vvwshN6XsxSEonAMwO6/nprdmdIVg87PqXlbpuIugvAim12M6qN5cejjS8AVtXdA0lV7FPzYJ7P9XcGXhNXSZKSxxS4EjTPXt5k=" noCertificadoSAT="00001000000202865018" selloSAT="SGQ/2RYHmgGEBGXS2fg7E+m1qV6raG6Jznqr9Hy7cVoIAe5wlOjcAQQsz2xbnbqvbgbP0koAdXaZVi3v9OTNwtguY+jvsQ0Ts67xHEUn24kx9mOD/2UpZz2oM65C6geAFRBRHztstlYoKU7KiWdJ2VY1u3iSS+qhiuJRKP1N8Bs=" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

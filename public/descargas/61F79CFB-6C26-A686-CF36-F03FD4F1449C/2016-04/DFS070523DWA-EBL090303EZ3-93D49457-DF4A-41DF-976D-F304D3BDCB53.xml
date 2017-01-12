@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd" version="3.2" serie="EA" folio="861111" fecha="2016-04-25T11:46:44" sello="p+dXgRVDBkO6VWEM2n4r+y17Gi59v6C0Xu4QrJDvMlqGkf0KNs/QbLtXz2qw8V6sVRvfq3/b0rVUDIeZrxvDStjAVhpgZRyqjVQXx+tD0jdMAuUybvGmkau6f6aLxtzta21ebzJHlhKVEjr1bwifqOMfFzYRS1mMhJp0tHg22Wk=" formaDePago="Pago en una sola exhibicion" noCertificado="00001000000202238078" certificado="MIIExjCCA66gAwIBAgIUMDAwMDEwMDAwMDAyMDIyMzgwNzgwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMTAyOTIzMjYyOFoXDTE2MTAyOTIzMjYyOFowggEGMTgwNgYDVQQDEy9EQUlNTEVSIEZJTkFOQ0lBTCBTRVJWSUNFUyBNRVhJQ08gUyBERSBSTCBERSBDVjE4MDYGA1UEKRMvREFJTUxFUiBGSU5BTkNJQUwgU0VSVklDRVMgTUVYSUNPIFMgREUgUkwgREUgQ1YxODA2BgNVBAoTL0RBSU1MRVIgRklOQU5DSUFMIFNFUlZJQ0VTIE1FWElDTyBTIERFIFJMIERFIENWMSUwIwYDVQQtExxERlMwNzA1MjNEV0EgLyBHQVNSNzUwMTA1RTdBMR4wHAYDVQQFExUgLyBHQVNSNzUwMTA1SERGUkJEMDkxDzANBgNVBAsTBlVOSURBRDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAr63znGe79hwSoiJALl1A4r43R/cXfCOkyvwHLcIqNkjWjSQewh9LDZVCV9cqZarngs1YbLxAtprjxMagxbGS+aGAxBXry0DQfosDlk8tYaOWbtI0v3/T74smLRv72EDDEmi6bTckrvhZDYnzFKm9Pz36uJ+grDht9Bu3ANRnIu8CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAI3k8WozjrqSGzERWjtN1frKsDHjprDGuBOQ019GlqpEk0aRq0oSnOGjmQzYMOjbtRBK1WLem9hiduwf+M8jS/dIRdbtrqZK3gO7iDDDLWSato/YhgiXKkFjtrBqTRf27faULPNW4Fu6Cf4yh5pPAmCi6Ux/d47aVcdGkiV/iQRCK+2Lowdcj+bydr4LbPgqmS25DXlzaFu8RH4BSBcxtYIbwIMdDRGmcc5X/wR6aYpEV+5aKrfzT4tcCN5Ki5czSALqZeHJcDYGrPg4RU6nUH/893yDKoonSM9a74nuBfvG9FfJIdaCuBlnzCbtK6r1nDMMYKCQ24hQ2RXBZuQlJrA=" subTotal="697.98" TipoCambio="1.0000" Moneda="MXN" total="747.26" tipoDeComprobante="ingreso" metodoDePago="NO IDENTIFICADO" LugarExpedicion="México, D.F." NumCtaPago="NO IDENTIFICADO">
+  <cfdi:Emisor rfc="DFS070523DWA" nombre="DAIMLER FINANCIAL SERVICES MEXICO, S. DE R.L. DE C.V.">
+    <cfdi:DomicilioFiscal calle="Av. Paseo de los Tamarindos" noExterior="90" noInterior="Piso 16" colonia="Bosques de las Lomas" localidad="Cuajimalpa de Morelos" municipio="México" estado="Distrito Federal" pais="Mexico" codigoPostal="05120" />
+    <cfdi:RegimenFiscal Regimen="REGIMEN GENERAL DE PERSONAS MORALES" />
+  </cfdi:Emisor>
+  <cfdi:Receptor rfc="EBL090303EZ3" nombre="EURO BLANC SA DE CV">
+    <cfdi:Domicilio calle="CALLE 32 NTE BIS 815 A" colonia="HUMBOLDT" localidad="PUEBLA" municipio="PUEBLA" estado="PUEBLA" pais="MEXICO" codigoPostal="72370" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto cantidad="1" unidad="No Aplica" descripcion="C205-Gastos de Gestion" valorUnitario="307.98" importe="307.98" />
+    <cfdi:Concepto cantidad="1" unidad="No Aplica" descripcion="I410-CARGO TENENCIA AP" valorUnitario="390.00" importe="390.00" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="49.28">
+    <cfdi:Traslados>
+      <cfdi:Traslado impuesto="IVA" tasa="16.00" importe="49.28" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" version="1.0" UUID="93D49457-DF4A-41DF-976D-F304D3BDCB53" FechaTimbrado="2016-04-25T11:49:47" noCertificadoSAT="00001000000301160463" selloCFD="p+dXgRVDBkO6VWEM2n4r+y17Gi59v6C0Xu4QrJDvMlqGkf0KNs/QbLtXz2qw8V6sVRvfq3/b0rVUDIeZrxvDStjAVhpgZRyqjVQXx+tD0jdMAuUybvGmkau6f6aLxtzta21ebzJHlhKVEjr1bwifqOMfFzYRS1mMhJp0tHg22Wk=" selloSAT="BmwuACtUzwUKFkCwVfrADQHe81pQ+5MXuTnFO59QbVK0ZYPzKRkJvLbrT/vB5R49IvcZedS3+Ps+0TFISbpbPbZMHJJHhTPzWBE4ebF4Pmhx5eT4TukvYI9xB/aXA+4VeUJvUxcBwm3Kz4PZ4eQcb7JEaD4+GE9OaCg+NvVAJYQ=" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

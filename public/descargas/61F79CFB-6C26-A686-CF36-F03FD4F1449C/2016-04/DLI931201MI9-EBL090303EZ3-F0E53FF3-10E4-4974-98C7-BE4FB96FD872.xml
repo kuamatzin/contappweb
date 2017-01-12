@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:bfa2="http://www.buzonfiscal.com/ns/addenda/bf/2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="Liverpool Polanco" metodoDePago="EFECTIVO" tipoDeComprobante="ingreso" total="188.0" subTotal="162.07" certificado="MIIEmDCCA4CgAwIBAgIUMDAwMDEwMDAwMDAyMDI5MzY1OTEwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEzMDEzMDE3MzM1N1oXDTE3MDEzMDE3MzM1N1owgdkxKTAnBgNVBAMTIERJU1RSSUJVSURPUkEgTElWRVJQT09MIFNBIERFIENWMSkwJwYDVQQpEyBESVNUUklCVUlET1JBIExJVkVSUE9PTCBTQSBERSBDVjEpMCcGA1UEChMgRElTVFJJQlVJRE9SQSBMSVZFUlBPT0wgU0EgREUgQ1YxJTAjBgNVBC0THERMSTkzMTIwMU1JOSAvIE1BTUE2NDA4MjE3WjExHjAcBgNVBAUTFSAvIE1BTUE2NDA4MjFIVlpSSk4wODEPMA0GA1UECxMGTUFUUklaMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDahhNvBmdLPOzXe2JYcgbFxAmvUM49MRWbXha3sv977ls+egA/cfYL3r6BhwNqnBSGW+yDQpVp6XSdltgojVRAT6ftsp5eTNFLlQ6Hz/2pcplW4GngLkf7EmfmPFxVkXRcdiFxtQCLNzZldtFq/TETwRW1msnVFY5vXQIxu3S1IwIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEAN03lIAt1IkR+R9dVQNWLspgQIBTt5fD63OUTe0h90FAjKk/nBMPiVdXzLycgLoQrEEbXC/YFAIRId40Eib70siptV1sh/8IP6+4NMvON56rm4kjTdhuiUk6KjI/7UwkGehkY8AGNOkmW1HyMma3l42Cu2H49k0ajNFe9SAxI5ZhsYI6K6MPoYd48BrAZkntZkgjChDa9y87kOnvPnETmiJwMFlGnvFFzqDSvIQ2iggoRRUqGCp6EX+Tv1kU2xNLbCL8E4w3w40Zk2PNS5g9mVxZ+1TDJDan+e6hb3thDdjYmRz39vn5isBX91+OAbqFPgs3MDzaykuiW9F4II/0VAA==" noCertificado="00001000000202936591" formaDePago="Pagado en una sola exhibición" sello="rWtx24DJJgEPUV7/Q8qkwbylKtf5V38MtQAQxKvfFEpxJ+gj5mLjdsD4V392yXgw+SeKfHvw9KonvqkDGsMugOSZPF/KVMwNgssFxSXPiFKD2aOx4sDkNd7qX9cGXcv9+9jeHlAQFnjQ6NWbbXG3GeBwfZ4hWIjtKOuoujzon2I=" fecha="2016-04-19T14:46:01" folio="544357" serie="LWD" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.buzonfiscal.com/ns/addenda/bf/2 http://www.buzonfiscal.com/schema/xsd/Addenda_BF_v20.xsd">
+  <cfdi:Emisor nombre="Distribuidora Liverpool S.A. de C.V." rfc="DLI931201MI9">
+    <cfdi:DomicilioFiscal codigoPostal="05348" pais="México" estado="México, D.F." municipio="Cuajimalpa de Morelos" colonia="Santa Fe Cuajimalpa" calle="C. Mario Pani No. 200" />
+    <cfdi:ExpedidoEn codigoPostal="11570" pais="México" estado="México, Distrito Federal" municipio="Miguel Hidalgo" referencia="LIV" colonia="Chapultepec Morales" calle="Mariano Escobedo No. 425" />
+    <cfdi:RegimenFiscal Regimen="REGIMEN GENERAL DE LEY PERSONAS MORALES" />
+  </cfdi:Emisor>
+  <cfdi:Receptor nombre="EURO BLANC SA DE CV" rfc="EBL090303EZ3">
+    <cfdi:Domicilio codigoPostal="72370" pais="MEXICO" estado="PUEBLA" municipio="PUEBLA" colonia="HUMBOLDT NORTE" calle="32 NORTE BIS 815- A" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto importe="162.07" valorUnitario="162.07" descripcion="Consumo" unidad="UN " cantidad="1" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="25.93">
+    <cfdi:Traslados>
+      <cfdi:Traslado importe="25.93" tasa="16.0" impuesto="IVA" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigital.xsd" selloSAT="bEhXVgMdHe4EXj6z8e8vpDAhcw7jg+kLQqa18bP7UtcuqxeiVjQXtp691RF9f8+88YON4qTjsRWuzXZBkodGNGR0ihq2bE3bpVIyVmCb4sSZk38hpoFbFdR6YirUzOppssjix6Wx9URkYxSTS9uoz7MeBoUukXO8n5OP3lPfSV0=" noCertificadoSAT="00001000000202693892" selloCFD="rWtx24DJJgEPUV7/Q8qkwbylKtf5V38MtQAQxKvfFEpxJ+gj5mLjdsD4V392yXgw+SeKfHvw9KonvqkDGsMugOSZPF/KVMwNgssFxSXPiFKD2aOx4sDkNd7qX9cGXcv9+9jeHlAQFnjQ6NWbbXG3GeBwfZ4hWIjtKOuoujzon2I=" FechaTimbrado="2016-04-19T14:46:01" UUID="f0e53ff3-10e4-4974-98c7-be4fb96fd872" version="1.0" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>
+

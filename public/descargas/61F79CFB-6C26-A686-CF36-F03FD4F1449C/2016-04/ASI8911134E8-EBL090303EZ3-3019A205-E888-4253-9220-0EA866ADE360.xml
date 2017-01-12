@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd" version="3.2" serie="A" folio="1669667" fecha="2016-04-30T15:37:14" sello="kGTLS1QurnK0jFdqFDJxQSzORd6LeQYukOaHY0kcyrqs40tFyBL2nPsGfdeXWVvpGkXKg7s0GYQ2bbVFmiQ0qBhqjR5hsJLz84kRhggJMkUn97J81Vldz+jDuAFRodtSlJj2gUYS3rllI+ZCUco76tglQK+eS0YiL1VIqkiKMvc=" formaDePago="PAGO EN UNA SOLA EXHIBICION" noCertificado="00001000000201356173" certificado="MIIEqDCCA5CgAwIBAgIUMDAwMDEwMDAwMDAyMDEzNTYxNzMwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxNDIzNDE0MFoXDTE2MDYxNDIzNDE0MFowgekxMDAuBgNVBAMTJ0FSQ09TIFNFUkNBTCBJTk1PQklMSUFSSUEgUyBERSBSTCBERSBDVjEwMC4GA1UEKRMnQVJDT1MgU0VSQ0FMIElOTU9CSUxJQVJJQSBTIERFIFJMIERFIENWMTAwLgYDVQQKEydBUkNPUyBTRVJDQUwgSU5NT0JJTElBUklBIFMgREUgUkwgREUgQ1YxJTAjBgNVBC0THEFTSTg5MTExMzRFOCAvIEJPQUY2OTAxMTFBOUExHjAcBgNVBAUTFSAvIEJPQUY2OTAxMTFIREZTTVIwNzEKMAgGA1UECxMBIDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA6Da97dkFkutvKGRsuMeAX+cq9pDeuMSI69SQ3BblbHtHXg5JdUwewmhVQv6p6c1vs7KwT8XANyL31zwvm4Hw7hJs3KcDBATvvsmMv5kSjthepTkHrLDrh5HYxR6erjGUojB41k7jmTEKiGofdv5IrsfHPbGggRY1sPwXMKYaSQkCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBACO+0sx81g/eF4Xf+qYSkB587os/8bK5BxtNog5JcTOaTcz+OHH5r6sjTXVAEFz9ISmwsZ33Ph0n7U6C6zkJ/WGSyo60DMoScAOSe72GDTPaCdOx0Px+nRSfETU3APLalNyegF2c4YdTlWqB8RZypp1ngPdjeuzrBZ41ajdKhquMWD78LS5UVxBTJ4W6wFAybHwM9hDPlB5q+8FkxaOqsbjvuMWHevI8MmmLZW1HE/ACnZMKw39EiIdQQ5ciXM8bkVEhumyDjf/F3LXCrJfepTUF+Q0wPwj+usTzOUMS1f203q9o4l1owr88dES9ZjGtOBs1bgCDyXQtwwEbQBRnGvM=" subTotal="17.2400" TipoCambio="1.0000" Moneda="MXP" total="20.0000" tipoDeComprobante="ingreso" metodoDePago="Efectivo" LugarExpedicion="MIGUEL HIDALGO">
+  <cfdi:Emisor rfc="ASI8911134E8" nombre="Arcos Sercal Inmobiliaria S De RL CV">
+    <cfdi:DomicilioFiscal calle="ANTONIO DOVALI JAIME" noExterior="75" noInterior="P-3" colonia="LOMAS DE SANTA FE" municipio="ALVARO OBREGON" estado="Distrito Federal" pais="México" codigoPostal="01219" />
+    <cfdi:ExpedidoEn calle="BLVD M. AVILA CAMACHO" noExterior="137" colonia="CHAPULTEPEC MORALES" municipio="MIGUEL HIDALGO" estado="DISTRITO FEDERAL" pais="MEXICO" codigoPostal="11510" />
+    <cfdi:RegimenFiscal Regimen="REGIMEN GENERAL DE LEY PERSONAS MORALES" />
+  </cfdi:Emisor>
+  <cfdi:Receptor rfc="EBL090303EZ3" nombre="EURO BLANC S.A. DE C.V.">
+    <cfdi:Domicilio calle="32 NORTE BIS" noExterior="815-A" colonia="HUMBOLDT NORTE" localidad="PUEBLA" municipio="PUEBLA" estado="PUEBLA" pais="MEXICO" codigoPostal="72370" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto cantidad="1.0000" unidad="NO APLICA" noIdentificacion="TASA16" descripcion="CONSUMO IVA 16%" valorUnitario="17.2400" importe="17.2400" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="2.7600">
+    <cfdi:Traslados>
+      <cfdi:Traslado impuesto="IVA" tasa="16.0000" importe="2.7600" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital version="1.0" UUID="3019A205-E888-4253-9220-0EA866ADE360" FechaTimbrado="2016-04-30T15:44:03" selloCFD="kGTLS1QurnK0jFdqFDJxQSzORd6LeQYukOaHY0kcyrqs40tFyBL2nPsGfdeXWVvpGkXKg7s0GYQ2bbVFmiQ0qBhqjR5hsJLz84kRhggJMkUn97J81Vldz+jDuAFRodtSlJj2gUYS3rllI+ZCUco76tglQK+eS0YiL1VIqkiKMvc=" noCertificadoSAT="00001000000203253077" selloSAT="Gw3jSpRtvSIiRqjOmI5wgAbnda/qb/SihtHa29pv1NhN0Qae8CW/CnAwwh8bk0afGD0SNCzHO5dQ4V6kUJobQ+2pyTjKi8JKWdSVJtkYYhEeRDfyef9OyzN+1/5geVDEPuhbXq04CTRnUuiyw+bJ6GOURkuHGiJZgI+7Q4dwIO4=" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigital.xsd" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

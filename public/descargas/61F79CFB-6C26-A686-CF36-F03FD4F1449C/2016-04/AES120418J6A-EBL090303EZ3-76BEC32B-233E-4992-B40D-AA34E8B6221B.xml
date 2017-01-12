@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd" version="3.2" serie="F" folio="00000092" fecha="2016-04-20T13:36:03" sello="Xe5ADhq9HW56aY0ayoA3AvJmtLj+EfjwuM6ya86pq3l2HAfJaZ3gDeqbiUa9gtYFQtHVQtUufoVGZ1HMKVsyfKhhiCcHctD6IXlM5+VZBUjMBUmHRl/MFCGw/rG80IQIhdl8iLzotEspYmlHo2qdj/mnJwwFMU5fDc38uC8XibU=" formaDePago="Pago en una sola exhibición" noCertificado="00001000000201371682" certificado="MIIEYjCCA0qgAwIBAgIUMDAwMDEwMDAwMDAyMDEzNzE2ODIwDQYJKoZIhvcNAQEF&#xA;BQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJh&#xA;Y2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3Ry&#xA;YWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBT&#xA;ZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lz&#xA;bmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1&#xA;ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERp&#xA;c3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxT&#xA;QVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlh&#xA;IEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxODE3NTg0NVoXDTE2&#xA;MDYxODE3NTg0NVowgaMxFzAVBgNVBAMTDkFSU0VNIFNBIERFIENWMRcwFQYDVQQp&#xA;Ew5BUlNFTSBTQSBERSBDVjEXMBUGA1UEChMOQVJTRU0gU0EgREUgQ1YxJTAjBgNV&#xA;BC0THEFFUzEyMDQxOEo2QSAvIEdBQ0I3MjA4MjBCSzExHjAcBgNVBAUTFSAvIEdB&#xA;Q0I3MjA4MjBIQ0xSU1IwNzEPMA0GA1UECxMGTUFUUklaMIGfMA0GCSqGSIb3DQEB&#xA;AQUAA4GNADCBiQKBgQCnFzdo5YW/1Yri5I+wnnqM3a5qoYTw6dT3hMJXltCbr7G6&#xA;nfroGpg8M5CB7KkkVzQuNA4TScQAa0mSNj+UCjbfoG9fb1mAP9A6F7MeqJiyV/Q3&#xA;afQWB/rOUSFeRF5+TmVYzzHu1kODMQvv7qGDAr6e3SQ3WBqjeVGj8Ojizk5TgwID&#xA;AQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUF&#xA;AAOCAQEAMNA8yvxCm8okxV7H2ITriuDB2HiHr28bOSRLArlFOSS7d+TZ4+7U5E7R&#xA;aI18Sf19mv1Ft/go/D5YDqP7cB4Zb82RI7dUE4bhcxQKKQVfdwHELV/MDuNpx+jj&#xA;XAq/30npziTJC03ITNbiMISS+TE9cfwSjzfevHgk1Y9BErd0/4xAt1t16WNbcw16&#xA;ZDdwCN+5rGpdlXwiAtgbapj1d8r2RRZNrKzxX0rhrPX2I5Bpx2mqNBzzciwQa5Dq&#xA;itVOn3oZ+j3ghk51RS3coMswES+9ExPXRW2tdULvGKQ4b/vOkY1xhvwf+5n3VimD&#xA;1PA6Osi2R0AGCPhOU5toS5KOhNfU7A==&#xA;" subTotal="110431.50" TipoCambio="1.0" Moneda="MN" condicionesDePago="CONTADO" total="128100.54" tipoDeComprobante="ingreso" metodoDePago="NO IDENTIFICADO" LugarExpedicion="MEXICO, D.F. " NumCtaPago="NO IDENTIFICADO">
+	<cfdi:Emisor rfc="AES120418J6A" nombre="ARSEM SA DE CV">
+		<cfdi:DomicilioFiscal calle="AVENIDA GUSTAVO BAZ PRADA" noExterior="42" noInterior="6 C" colonia="CENTRO" localidad="XOCOYAHUALCO" municipio="TLALNEPANTLA DE BAZ" estado="MEXICO" pais="MEXICO" codigoPostal="54080" />
+		<cfdi:ExpedidoEn calle="AVENIDA GUSTAVO BAZ PRADA" codigoPostal="54080" colonia="XOCOYAHUALCO" estado="MEXICO" municipio="TLALNEPANTLA DE BAZ" noExterior="42" noInterior="6 C" pais="México" />
+	<cfdi:RegimenFiscal Regimen="PERSONA MORAL REGIMEN GENERAL DE LEY" />
+	</cfdi:Emisor>
+	<cfdi:Receptor rfc="EBL090303EZ3" nombre="EURO BLANC S.A. DE C.V.">
+		<cfdi:Domicilio calle="CALLE 32 NORTE  " noExterior="BIS 815" noInterior="A" colonia="HUMBOLDT NORTE" municipio="PUEBLA" estado="PUEBLA" pais="MEXICO" codigoPostal="72370" />
+	</cfdi:Receptor>
+	<cfdi:Conceptos>
+		<cfdi:Concepto cantidad="1050" unidad="PIEZA" noIdentificacion="SI09" descripcion="BOLSA VERTICAL PARA JGO DE SABANA INDIVIDUAL" valorUnitario="3.85" importe="4042.50" />
+		<cfdi:Concepto cantidad="2050" unidad="PIEZA" noIdentificacion="SI10" descripcion="BOLSA VERTICAL PARA JGO DE SABANA MATRIMONIAL" valorUnitario="3.96" importe="8118.00" />
+		<cfdi:Concepto cantidad="1000" unidad="PIEZA" noIdentificacion="SI11" descripcion="BOLSA VERTICAL PARA JGO DE SABANA KING SIZE" valorUnitario="4.07" importe="4070.00" />
+		<cfdi:Concepto cantidad="1200" unidad="PIEZA" noIdentificacion="SI12" descripcion="BOLSA CRISTAL PARA COLCHA UNICA" valorUnitario="6.60" importe="7920.00" />
+		<cfdi:Concepto cantidad="100" unidad="PIEZA" noIdentificacion="SI13" descripcion="BOLSA PARA EDRECOLCHA INDIVIDUAL" valorUnitario="6.82" importe="682.00" />
+		<cfdi:Concepto cantidad="100" unidad="PIEZA" noIdentificacion="SI14" descripcion="BOLSA EDREDON IND" valorUnitario="5.58" importe="558.00" />
+		<cfdi:Concepto cantidad="2250" unidad="PIEZA" noIdentificacion="SI15" descripcion="BOLSA EDREDON IND C/NEGRO F/25" valorUnitario="8.80" importe="19800.00" />
+		<cfdi:Concepto cantidad="100" unidad="PIEZA" noIdentificacion="SI16" descripcion="BOLSA EDREDON MAT C/NEGRO F/30" valorUnitario="9.13" importe="913.00" />
+		<cfdi:Concepto cantidad="50" unidad="PIEZA" noIdentificacion="SI17" descripcion="BOLSA EDREDO IND" valorUnitario="9.24" importe="462.00" />
+		<cfdi:Concepto cantidad="100" unidad="PIEZA" noIdentificacion="SI18" descripcion="BOLSA EDREDON MAT" valorUnitario="9.57" importe="957.00" />
+		<cfdi:Concepto cantidad="50" unidad="PIEZA" noIdentificacion="SI19" descripcion="BOLSA EDREDON KS" valorUnitario="9.90" importe="495.00" />
+		<cfdi:Concepto cantidad="4600" unidad="PIEZA" noIdentificacion="SI20" descripcion="BOLSA EDREDON KS C/NEGRO F/35" valorUnitario="10.01" importe="46046.00" />
+		<cfdi:Concepto cantidad="1550" unidad="PIEZA" noIdentificacion="SI21" descripcion="BOLSA EDREDON KS C/NEGRO F/40" valorUnitario="10.56" importe="16368.00" />
+		
+	</cfdi:Conceptos>
+	<cfdi:Impuestos totalImpuestosRetenidos="0.00" totalImpuestosTrasladados="17669.04">
+		<cfdi:Traslados>
+			<cfdi:Traslado impuesto="IVA" tasa="16" importe="646.80" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="1298.88" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="651.20" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="1267.20" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="109.12" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="89.28" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="3168.00" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="146.08" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="73.92" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="153.12" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="79.20" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="7367.36" />
+		<cfdi:Traslado impuesto="IVA" tasa="16" importe="2618.88" />
+		</cfdi:Traslados>
+	</cfdi:Impuestos>
+<cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd" version="1.0" UUID="76BEC32B-233E-4992-B40D-AA34E8B6221B" FechaTimbrado="2016-04-20T13:42:09" selloCFD="Xe5ADhq9HW56aY0ayoA3AvJmtLj+EfjwuM6ya86pq3l2HAfJaZ3gDeqbiUa9gtYFQtHVQtUufoVGZ1HMKVsyfKhhiCcHctD6IXlM5+VZBUjMBUmHRl/MFCGw/rG80IQIhdl8iLzotEspYmlHo2qdj/mnJwwFMU5fDc38uC8XibU=" noCertificadoSAT="00001000000202639096" selloSAT="qq6Y5Sq9QqMDHAkMfuVoGI619YCoYkE5gbL6GzyCvcEkumAYs8BpQo//PwqVYmQfYA85QsXfLDnFMA0o852QWygs0VRWafeySONyq68USEsUCGURCjPMdqmz6n+mbTdHJac5oh9zhr5OUqUpFpiNdpxgjnD6wslK3y/kwJ+f/ZQ=" /></cfdi:Complemento></cfdi:Comprobante>

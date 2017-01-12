@@ -294,8 +294,15 @@ class FacturaController extends Controller
                 $xml = new \SimpleXMLElement($contents);
                 $complemento = $xml->children('cfdi', true)->Complemento->children('tfd', true)->attributes();
                 $uuid = (string)$complemento['UUID'];
+                
+                //Algunas facturas tenian un caracter raro al final y por eso se implemento esta parte de codigo
+                $date = (string)$xml['fecha'];
+                $last_char_date = substr($date, -1);
+                if (ctype_alpha($last_char_date)) {
+                    $date = substr($date, 0, -1);
+                }
+                $fecha = Carbon::createFromFormat('Y-m-d\TH:i:s', $date);
 
-                $fecha = Carbon::createFromFormat('Y-m-d\TH:i:s', (string)$xml['fecha']);
                 //Seleccionamos un nombre único para la factura
                 //Si pasa entonces la request viene de la carga manual de facturas
                 if(strpos($file->getRealPath(), '/private/var/tmp/') !== false){
