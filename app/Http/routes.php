@@ -321,6 +321,10 @@ Route::get('/request', function(){
     //3. VERIFY IF THE SERVER HAS ALREADY THE XML IF SO THEN VERIFY IF THE STATUS HAS CHANGED
     $files = File::allFiles(public_path() . "/descargas/$identificador/");
     foreach ($files as $key => $file) {
+        //Para no perder el valor de la variable (SUPER RARO)
+        $peticion = RequestApp::where('identificador', Input::get('identificador'))->first();
+        $json = json_decode($peticion->request['data']);
+
         //Han pasado más de 100 facturas, se debe poner un timer para que descanse el servidor Dreamhost
         if ($key % 100 == 0){
             usleep(10000000);
