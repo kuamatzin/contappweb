@@ -802,7 +802,7 @@
             },
             almacenar_facturas: function(identificador){
                 console.log("Voy a hacer petición para guardar facturas: " + identificador);
-                this.$http.get('/request', {identificador: identificador}).then(function(response){
+                this.$http.get('/request?identificador=' + identificador).then(function(response){
                     if (response.status == 200) {
                         console.log("YEI");
                     }
