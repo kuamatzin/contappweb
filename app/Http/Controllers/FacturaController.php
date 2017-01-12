@@ -286,7 +286,7 @@ class FacturaController extends Controller
 
             //Han pasado más de 100 facturas, se debe poner un timer para que descanse el servidor Dreamhost
             if ($key % 100 == 0){
-                usleep(10000000);
+                usleep(2000000);
             }
             $extension = File::extension($file->getFilename());
             if ($extension == 'xml') {
@@ -338,7 +338,7 @@ class FacturaController extends Controller
                     //Agregar nueva factura
                     //Guardamos en el sistema de archivos del servidor
                     Storage::move("/descargas/$identificador/$fecha_folder" . $nombre_original, "/facturas_clientes/$name");
-                    usleep(300000);
+                    usleep(100000);
                     //$file->move('facturas_clientes', $name);
                 }
                 else {
