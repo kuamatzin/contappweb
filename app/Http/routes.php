@@ -256,7 +256,7 @@ Route::post('/comprobar', function(Request $request){
     $client->close();
 });
 
-Route::post('/request', function(Request $request){
+Route::get('/request', function(Request $request){
 
     //Ocupar esto cuando se desean hacer pruebas. CAMBIAR METODO A GET
     /*
