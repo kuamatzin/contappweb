@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use App\Categoria;
 use App\Cliente;
 use App\Factura;
-use App\Request as RequestApp;
-use ElephantIO\Client;
-use ElephantIO\Engine\SocketIO\Version1X;
 use App\Http\Requests;
+use App\Request as RequestApp;
 use App\Services\ExcelGenerator;
 use App\Services\FacturaPDF;
 use App\Services\XML;
 use App\Services\ZIP;
 use Carbon\Carbon;
+use ElephantIO\Client;
+use ElephantIO\Engine\SocketIO\Version1X;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -251,7 +251,7 @@ class FacturaController extends Controller
 
         file_put_contents(public_path() . "/descargas/$identificador.zip", fopen($link_download, 'r'));
         //2. UNZIP THE FILE ON SERVER
-        $zip = new ZipArchive();
+        $zip = new  \ZipArchive();
         $zip_status = $zip->open(public_path() . "/descargas/$identificador.zip");
 
         if ($zip_status === true)
