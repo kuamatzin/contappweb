@@ -214,7 +214,7 @@ class FacturaController extends Controller
         }
     }
 
-    public function webhook()
+    public function webhook(Request $request)
     {
         $info = $request->all();
         $json = json_decode($info['data']);

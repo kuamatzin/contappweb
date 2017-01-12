@@ -126,29 +126,7 @@ Route::post('store_request', function(Request $request){
 
 
 //Aqui guarda cuando la petición es completada
-Route::post('/comprobar', function(Request $request){
-    $info = $request->all();
-    $json = json_decode($info['data']);
-    $identificador = $json->Contribuyente->Identificador;
-    $peticion = RequestApp::where('identificador', $identificador)->first();
-    $peticion->request = $info;
-    $peticion->save();
-
-    if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
-        $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
-        //$client = new Client(new Version1X('http://localhost:3000'));
-        $client->initialize();
-        $client->emit('no_documents', ['data' => $peticion->request]);
-        $client->close();
-        return 0;
-    }
-
-    $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
-    //$client = new Client(new Version1X('http://localhost:3000'));
-    $client->initialize();
-    $client->emit('request_updated', ['data' => $info]);
-    $client->close();
-});
+Route::post('/comprobar', 'FacturaController@webhook');
 
 Route::get('/request', 'FacturaController@guardarFacturas');
 
