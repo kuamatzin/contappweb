@@ -244,6 +244,11 @@ class FacturaController extends Controller
         $this->guardarFacturas($identificador);
     }
 
+
+    public function pruebaWebhook($identificador){
+        $this->guardarFacturas($identificador);
+    }
+
     public function guardarFacturas($identificador)
     {
         //Ocupar esto cuando se desean hacer pruebas. CAMBIAR METODO A GET
@@ -302,8 +307,9 @@ class FacturaController extends Controller
         $files = File::allFiles(public_path() . "/descargas/$identificador/");
         foreach ($files as $key => $file) {
             //Para no perder el valor de la variable (SUPER RARO)
-            $peticion = RequestApp::where('identificador', Input::get('identificador'))->first();
-            $json = json_decode($peticion->request['data']);
+            //$peticion = RequestApp::where('identificador', Input::get('identificador'))->first();
+            //$peticion = RequestApp::where('identificador', $identificador)->first();
+            //$json = json_decode($peticion->request['data']);
 
             //Han pasado más de 100 facturas, se debe poner un timer para que descanse el servidor Dreamhost
             if ($key % 100 == 0){
@@ -363,7 +369,7 @@ class FacturaController extends Controller
                     //$file->move('facturas_clientes', $name);
                 }
                 else {
-                    echo "Factura ya existe";
+                    echo "Factura ya existe: $uuid<br>";
                 }
             }
         }
