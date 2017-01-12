@@ -244,11 +244,6 @@ class FacturaController extends Controller
         $this->guardarFacturas($identificador);
     }
 
-
-    public function pruebaWebhook($identificador){
-        $this->guardarFacturas($identificador);
-    }
-
     public function guardarFacturas($identificador)
     {
         //Ocupar esto cuando se desean hacer pruebas. CAMBIAR METODO A GET
@@ -386,5 +381,17 @@ class FacturaController extends Controller
         $client->close();
 
         return "Factutas almacenandas correctamente";
+    }
+
+    public function verificarRequest($anio, $mes, $tipo_consulta, $cliente_id)
+    {
+        $cliente = Cliente::findOrFail($cliente_id);
+        $request = RequestApp::where('cliente_id', $cliente->id)->where('ejercicio_fiscal', $anio)->where('mes', $mes)->where('tipo_consulta', $tipo_consulta)->get()->last();
+        if ($request != null) {
+            return $request;
+        }
+        else {
+            return "Sin resultados";
+        }
     }
 }

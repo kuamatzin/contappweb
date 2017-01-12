@@ -128,7 +128,7 @@ Route::post('store_request', function(Request $request){
 //Aqui guarda cuando la petición es completada
 Route::post('/comprobar', 'FacturaController@webhook');
 
-Route::get('prueba/{identificador}', 'FacturaController@pruebaWebhook');
+Route::get('verificarRequest/{anio}/{mes}/{tipo_consulta}/{rfc}', 'FacturaController@verificarRequest');
 
 Route::auth();
 

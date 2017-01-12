@@ -740,6 +740,48 @@
                     rfc: this.rfc_cliente,
                     password: this.d_password
                 };
+                this.$http.get('/verificarRequest/' + this.ejercicio_fiscal + '/' + this.d_mes + '/' + this.d_consulta + '/' + this.cliente_id).then(function(response){
+                    //Respuesta exitosa
+                    if (response.status == 200) {
+                        if (response.body == "Sin resultados") {
+                            console.log("Peticion a SAT")
+                        }
+                        else {
+                            var request = JSON.parse(response.body);
+                            var data = JSON.parse(request.request.data);
+                            var status = request.completado ? "Todas facturas guardadas" : "Faltaron facturas por guardar";
+                            var descargas = data.Solicitud.Resumen.Resultado.Descargados;
+                            var documentos = data.Solicitud.Resumen.Resultado.Documentos;
+                            var vigentes = data.Solicitud.Resumen.Resultado.Vigentes;
+                            var cancelados = data.Solicitud.Resumen.Resultado.Cancelados;
+                            var acuses = data.Solicitud.Resumen.Resultado.Acuses;
+                            swal({
+                              title: "Esta petición de descarga ya se había hecho con anterioridad",
+                              showCancelButton: true,
+                              confirmButtonColor: "#DD6B55",
+                              confirmButtonText: "Si, descargar de nuevo",
+                              closeOnConfirm: false,
+                              text: "<p><strong>Documentos: " + documentos + "</strong></p>" + "<p><strong>Descargados: " + descargas + "</strong></p>" + "<p><strong>Acuses: " + acuses + "</strong></p>" + "<p><strong>Cancelados: " + cancelados + "</strong></p>" + "<p><strong>Vigentes: " + vigentes + "</strong></p>" + "<p><strong>Status: " + status  + "<br><h3>¿Desea volver a hacer la descarga?</h3>",
+                              html: true
+                            },
+                            function(){
+                              that.peticionSat2();
+                            });
+                        }
+                    }
+                }, function(error){
+
+                });
+            },
+            peticionSat: function(){
+                var that = this;
+                var data = {
+                    anio: this.d_ejercicio_fiscal,
+                    mes: this.d_mes,
+                    tipo_consulta: this.d_consulta,
+                    rfc: this.rfc_cliente,
+                    password: this.d_password
+                };
                 this.$http.post('/descargar', data).then(function(response){
                     that.descargar_sat_form = false;
                     //Respuesta exitosa
