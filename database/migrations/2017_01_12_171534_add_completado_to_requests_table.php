@@ -15,6 +15,7 @@ class AddCompletadoToRequestsTable extends Migration
         Schema::table('requests', function (Blueprint $table) {
             $table->boolean('completado')->after('request');
         });
+        
     }
 
     /**
