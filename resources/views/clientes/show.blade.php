@@ -745,6 +745,7 @@
                     if (response.status == 200) {
                         if (response.body == "Sin resultados") {
                             console.log("Peticion a SAT")
+                            that.peticionSat();
                         }
                         else {
                             var request = JSON.parse(response.body);
@@ -765,7 +766,7 @@
                               html: true
                             },
                             function(){
-                              that.peticionSat2();
+                              that.peticionSat();
                             });
                         }
                     }
