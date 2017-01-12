@@ -259,7 +259,7 @@ class FacturaController extends Controller
             if ($zip->setPassword($password))
             {
                 for( $i = 0 ; $i < $zip->numFiles ; $i++ ) {
-                    if (DateTime::createFromFormat('Y-m/', $zip->getNameIndex($i)) !== FALSE) {
+                    if (\DateTime::createFromFormat('Y-m/', $zip->getNameIndex($i)) !== FALSE) {
                       $fecha_folder = $zip->getNameIndex($i);
                     }
                     $size = strlen($zip->getNameIndex($i));
