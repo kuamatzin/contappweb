@@ -214,6 +214,35 @@ class FacturaController extends Controller
         }
     }
 
+    public function webhook()
+    {
+        $info = $request->all();
+        $json = json_decode($info['data']);
+        $identificador = $json->Contribuyente->Identificador;
+        $peticion = RequestApp::where('identificador', $identificador)->first();
+        $peticion->request = $info;
+        $peticion->completado = false;
+        $peticion->save();
+
+        if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
+            $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
+            //$client = new Client(new Version1X('http://localhost:3000'));
+            $client->initialize();
+            $client->emit('no_documents', ['data' => $peticion->request]);
+            $client->close();
+            return 0;
+        }
+
+        $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
+        //$client = new Client(new Version1X('http://localhost:3000'));
+        $client->initialize();
+        $client->emit('request_updated', ['data' => $info]);
+        $client->close();
+
+        //$this->guardarFacturas();
+
+    }
+
     public function guardarFacturas()
     {
         //Ocupar esto cuando se desean hacer pruebas. CAMBIAR METODO A GET
@@ -229,15 +258,6 @@ class FacturaController extends Controller
         $identificador_request = Input::get('identificador');
         $peticion = RequestApp::where('identificador', $identificador_request)->first();
         $json = json_decode($peticion->request['data']);
-        
-        if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
-            $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
-            //$client = new Client(new Version1X('http://localhost:3000'));
-            $client->initialize();
-            $client->emit('no_documents', ['data' => $peticion->request]);
-            $client->close();
-            return 0;
-        }
 
         //1. DOWNLOAD THE FILE
         $link_download = $json->Solicitud->Resumen->Archivo;
@@ -346,6 +366,10 @@ class FacturaController extends Controller
                 }
             }
         }
+
+        $peticion->completado = true;
+        $peticion->save();
+
         //3. RUN FUNCTION FOR CREATE FACTURAS
         //SEND TO SOCKET TO SEND TO THE CLIENT THE DOWNLOAD HAS FINISHED
         $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
