@@ -225,6 +225,8 @@ class FacturaController extends Controller
         $peticion->save();
 
         if ($json->Solicitud->Resumen->Resultado->Documentos == 0){
+            $peticion->completado = true;
+            $peticion->save();
             $client = new Client(new Version1X('https://calm-plateau-72045.herokuapp.com'));
             //$client = new Client(new Version1X('http://localhost:3000'));
             $client->initialize();
@@ -239,11 +241,10 @@ class FacturaController extends Controller
         $client->emit('request_updated', ['data' => $info]);
         $client->close();
 
-        //$this->guardarFacturas();
-
+        $this->guardarFacturas($identificador);
     }
 
-    public function guardarFacturas()
+    public function guardarFacturas($identificador)
     {
         //Ocupar esto cuando se desean hacer pruebas. CAMBIAR METODO A GET
         /*
@@ -255,7 +256,7 @@ class FacturaController extends Controller
         */
 
         //Para hacer la petición de descarga y guardado de facturas
-        $identificador_request = Input::get('identificador');
+        $identificador_request = $identificador;
         $peticion = RequestApp::where('identificador', $identificador_request)->first();
         $json = json_decode($peticion->request['data']);
 

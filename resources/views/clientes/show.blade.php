@@ -547,10 +547,9 @@
         var acuses = data.Solicitud.Resumen.Resultado.Acuses;
         vm.descargar_sat_form = true;
         vm.descargar_sat_text = false;
-        vm.almacenar_facturas(vm.identificador);
         if (vm.identificador == data.Contribuyente.Identificador) {
             swal({
-              title: "Descarga Completada",
+              title: "Descarga Completada, guardando información",
               text: "<p><strong>Documentos: " + documentos + "</strong></p>" + "<p><strong>Descargados: " + descargas + "</strong></p>" + "<p><strong>Acuses: " + acuses + "</strong></p>" + "<p><strong>Cancelados: " + cancelados + "</strong></p>" + "<p><strong>Vigentes: " + vigentes + "</strong></p><br><h3>Estamos guardando la información en tu cuenta... Esto puede tardar unos minutos</h3><br><img src='http://cdn.liveonlineservices.com/upload/img/loading1.gif' width='80px' class='img-responsive center-block'>",
               html: true
             });
@@ -567,7 +566,7 @@
         var acuses = data.Solicitud.Resumen.Resultado.Acuses;
         if (vm.identificador == data.Contribuyente.Identificador) {
             swal({
-              title: "¡Descarga Completada!",
+              title: "Proceso Completado!",
               text: "<p><strong>Documentos: " + documentos + "</strong></p>" + "<p><strong>Descargados: " + descargas + "</strong></p>" + "<p><strong>Acuses: " + acuses + "</strong></p>" + "<p><strong>Cancelados: " + cancelados + "</strong></p>" + "<p><strong>Vigentes: " + vigentes + "</strong></p><br><h3>Solicitud completada, información almacenanda</h3>",
               html: true
             });
