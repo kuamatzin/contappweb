@@ -795,6 +795,7 @@
                 this.$http.post('/store_request', data).then(function(response){
                     //Respuesta exitosa
                     if (response.status == 200) {
+                        console
                     }
                 }, function(error){
 
