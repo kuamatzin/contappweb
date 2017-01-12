@@ -1,6 +1,7 @@
 /vendor
 /node_modules
 /public/storage
+/public/descargas
 /public/facturas_clientes
 /public/facturas_pdf
 /public/facturas_word
@@ -9,3 +10,4 @@
 Homestead.yaml
 Homestead.json
 .env
+!/vendor/phpoffice/phpword/src/PhpWord/TemplateProcessor.php
