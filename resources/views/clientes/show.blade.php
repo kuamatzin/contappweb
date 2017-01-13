@@ -749,31 +749,70 @@
                         }
                         else {
                             var request = JSON.parse(response.body);
-                            var data = JSON.parse(request.request.data);
-                            var status = request.completado ? "Todas facturas guardadas" : "Faltaron facturas por guardar";
-                            var descargas = data.Solicitud.Resumen.Resultado.Descargados;
-                            var documentos = data.Solicitud.Resumen.Resultado.Documentos;
-                            var vigentes = data.Solicitud.Resumen.Resultado.Vigentes;
-                            var cancelados = data.Solicitud.Resumen.Resultado.Cancelados;
-                            var acuses = data.Solicitud.Resumen.Resultado.Acuses;
-                            swal({
-                              title: "Esta petición de descarga ya se había hecho con anterioridad",
-                              showCancelButton: true,
-                              confirmButtonColor: "#DD6B55",
-                              confirmButtonText: "Si, descargar de nuevo",
-                              closeOnConfirm: false,
-                              text: "<p><strong>Documentos: " + documentos + "</strong></p>" + "<p><strong>Descargados: " + descargas + "</strong></p>" + "<p><strong>Acuses: " + acuses + "</strong></p>" + "<p><strong>Cancelados: " + cancelados + "</strong></p>" + "<p><strong>Vigentes: " + vigentes + "</strong></p>" + "<p><strong>Status: " + status  + "<br><h3>¿Desea volver a hacer la descarga?</h3>",
-                              html: true
-                            },
-                            function(){
+                            if (request.completado == true) {
+                                var data = JSON.parse(request.request.data);
+                                var status = request.completado ? "Todas facturas guardadas" : "Faltaron facturas por guardar";
+                                var descargas = data.Solicitud.Resumen.Resultado.Descargados;
+                                var documentos = data.Solicitud.Resumen.Resultado.Documentos;
+                                var vigentes = data.Solicitud.Resumen.Resultado.Vigentes;
+                                var cancelados = data.Solicitud.Resumen.Resultado.Cancelados;
+                                var acuses = data.Solicitud.Resumen.Resultado.Acuses;
                                 swal({
-                                  title: "Descarga en proceso",
-                                  text: "Esto puede tardar unos minutos",
-                                  timer: 1600,
-                                  showConfirmButton: false
+                                  title: "Esta petición de descarga ya se había hecho con anterioridad",
+                                  showCancelButton: true,
+                                  confirmButtonColor: "#DD6B55",
+                                  confirmButtonText: "Si, descargar de nuevo",
+                                  closeOnConfirm: false,
+                                  text: "<p><strong>Documentos: " + documentos + "</strong></p>" + "<p><strong>Descargados: " + descargas + "</strong></p>" + "<p><strong>Acuses: " + acuses + "</strong></p>" + "<p><strong>Cancelados: " + cancelados + "</strong></p>" + "<p><strong>Vigentes: " + vigentes + "</strong></p>" + "<p><strong>Status: " + status  + "<br><h3>¿Desea volver a hacer la descarga?</h3>",
+                                  html: true
+                                },
+                                function(){
+                                    swal({
+                                      title: "Descarga en proceso",
+                                      text: "Esto puede tardar unos minutos",
+                                      timer: 1600,
+                                      showConfirmButton: false
+                                    });
+                                  that.peticionSat();
                                 });
-                              that.peticionSat();
-                            });
+                            }
+                            else {
+                                //Si se compelto la descarga pero no se completó el procesamiento de información
+                                if (request.request != null) {
+                                    swal({
+                                      title: "Descarga Completada pero no se guardo la información en su cuenta",
+                                      showCancelButton: true,
+                                      confirmButtonColor: "#DD6B55",
+                                      confirmButtonText: "Si, descargar de nuevo",
+                                      closeOnConfirm: false,
+                                      text: "<p><strong>Documentos: " + documentos + "</strong></p>" + "<p><strong>Descargados: " + descargas + "</strong></p>" + "<p><strong>Acuses: " + acuses + "</strong></p>" + "<p><strong>Cancelados: " + cancelados + "</strong></p>" + "<p><strong>Vigentes: " + vigentes + "</strong></p>" + "<p><strong>Status: " + status  + "<br><h3>Procesar información?</h3>",
+                                      html: true
+                                    },
+                                    function(){
+                                        swal({
+                                          title: "Descarga en proceso",
+                                          text: "Esto puede tardar unos minutos",
+                                          timer: 1600,
+                                          showConfirmButton: false
+                                        });
+                                      that.peticionSat();
+                                    });
+                                }
+                                //No hay información de request, eso queire decir que se hizo la peticion pero nunca hubo respuesta del webhook
+                                else {
+                                    that.$http.get('/consulta?id=' + that.identificador + '&rfc=' + that.rfc_cliente).then(function(response_consulta){
+                                        if (response_consulta.status == 200) {
+                                            var data = JSON.parse(response_consulta.data);
+                                            if (data.Solicitud.Status == "-1") {
+                                                that.peticionSat();
+                                            }
+                                            else {
+                                                swal("Solicitud en proceso");
+                                            }
+                                        }
+                                    });
+                                }       
+                            }
                         }
                     }
                 }, function(error){
@@ -820,8 +859,6 @@
                                                 that.descargar_sat_text = true;
                                             }
                                         }
-                                    }, function(error){
-
                                     });
                                 }, 9000);
                             }
