@@ -750,8 +750,8 @@
                         else {
                             var request = JSON.parse(response.body);
                             that.identificador = request.identificador;
+                            var data = JSON.parse(request.request.data);
                             if (request.completado == true) {
-                                var data = JSON.parse(request.request.data);
                                 var status = request.completado ? "Todas facturas guardadas" : "Faltaron facturas por guardar";
                                 var descargas = data.Solicitud.Resumen.Resultado.Descargados;
                                 var documentos = data.Solicitud.Resumen.Resultado.Documentos;
@@ -779,7 +779,7 @@
                             }
                             else {
                                 //Si se compelto la descarga pero no se completó el procesamiento de información
-                                if (request.request != null) {
+                                if (request.request != null && data.Solicitud.Status != "-1") {
                                     swal({
                                       title: "Descarga Completada pero no se guardo la información en su cuenta",
                                       showCancelButton: true,
