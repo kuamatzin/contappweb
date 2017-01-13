@@ -749,6 +749,7 @@
                         }
                         else {
                             var request = JSON.parse(response.body);
+                            that.identificador = request.identificador;
                             if (request.completado == true) {
                                 var data = JSON.parse(request.request.data);
                                 var status = request.completado ? "Todas facturas guardadas" : "Faltaron facturas por guardar";
