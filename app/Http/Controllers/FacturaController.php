@@ -338,7 +338,7 @@ class FacturaController extends Controller
                 }
                 //Verificar si ya esta en la base de datos
                 if (Factura::existe($uuid)->count() == 0) {
-                    $factura = XML::createFactura($xml, $name, $cliente_id, $fecha, $key);
+                    $factura = XML::createFactura($xml, $name, $cliente_id, $fecha);
                     
                     if ($factura['rfcDeEmisor'] == $rfc) {
                         //Factura emitida

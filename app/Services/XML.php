@@ -13,7 +13,7 @@ class XML
         
     }
 
-    public static function createFactura($xml, $name, $cliente_id, $fecha, $key)
+    public static function createFactura($xml, $name, $cliente_id, $fecha)
     {
         $atributos_faltantes = $xml->children('http://www.sat.gob.mx/cfd/3');
     
