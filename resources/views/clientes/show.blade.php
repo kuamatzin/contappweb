@@ -714,7 +714,7 @@
             descargarReporte: function(){
                 var that = this;
                 this.$http.get('/facturas/busquedaFacturas/' + this.cliente_id + '?ejercicio_fiscal=' + this.ejercicio_fiscal + '&mes=' + this.mes + '&rfcBusqueda=' + this.rfcBusqueda + '&tipo=' + this.tipo + '&comprobante=' + this.comprobante + '&excel=1').then(function(facturas){
-                    window.location.href = 'http://contador.dev/reportes/reporteFacturas.xlsx';
+                    window.location.href = '/reporteFacturas.xlsx';
                 }, function(error){
                     console.log(error)
                 });
@@ -722,7 +722,7 @@
             descargarFacturas: function(){
                 var that = this;
                 this.$http.get('/facturas/busquedaFacturas/' + this.cliente_id + '?ejercicio_fiscal=' + this.ejercicio_fiscal + '&mes=' + this.mes + '&rfcBusqueda=' + this.rfcBusqueda + '&tipo=' + this.tipo + '&comprobante=' + this.comprobante + '&zip=1').then(function(facturas){
-                    window.location.href = 'http://contador.dev/' + this.rfc_cliente + '_' + this.mes + '.zip';
+                    window.location.href = '/' + this.rfc_cliente + '_' + this.mes + '.zip';
                 }, function(error){
                     console.log(error)
                 });
