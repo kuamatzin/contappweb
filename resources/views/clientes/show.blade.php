@@ -714,7 +714,7 @@
             descargarReporte: function(){
                 var that = this;
                 this.$http.get('/facturas/busquedaFacturas/' + this.cliente_id + '?ejercicio_fiscal=' + this.ejercicio_fiscal + '&mes=' + this.mes + '&rfcBusqueda=' + this.rfcBusqueda + '&tipo=' + this.tipo + '&comprobante=' + this.comprobante + '&excel=1').then(function(facturas){
-                    window.location.href = '/reporteFacturas.xlsx';
+                    window.location.href = '/reportes/reporteFacturas.xlsx';
                 }, function(error){
                     console.log(error)
                 });
