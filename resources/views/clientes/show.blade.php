@@ -766,6 +766,12 @@
                               html: true
                             },
                             function(){
+                                swal({
+                                  title: "Descarga en proceso",
+                                  text: "Esto puede tardar unos minutos",
+                                  timer: 1600,
+                                  showConfirmButton: false
+                                });
                               that.peticionSat();
                             });
                         }
