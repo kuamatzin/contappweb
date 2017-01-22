@@ -124,6 +124,7 @@ Route::post('store_request', function(Request $request){
     return "Exito";
 });
 
+
 //Aqui guarda cuando la petición es completada
 Route::post('/comprobar', 'FacturaController@webhook');
 
