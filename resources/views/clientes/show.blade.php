@@ -554,6 +554,7 @@
               html: true
             });
         }
+        vm.almacenar_facturas(data.Contribuyente.Identificador);
     });
 
     socket.on('saludo', function(msg){
@@ -881,8 +882,7 @@
                 this.$http.post('/store_request', data).then(function(response){
                     //Respuesta exitosa
                     if (response.status == 200) {
-                        console
-                    }
+                        console                    }
                 }, function(error){
 
                 });

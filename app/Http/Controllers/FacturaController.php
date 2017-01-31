@@ -244,7 +244,7 @@ class FacturaController extends Controller
         $this->guardarFacturas($identificador);
     }
 
-    public function guardarFacturas($identificador)
+    public function guardarFacturas()
     {
         //Ocupar esto cuando se desean hacer pruebas. CAMBIAR METODO A GET
         /*
@@ -254,6 +254,8 @@ class FacturaController extends Controller
         $peticion = RequestApp::where('identificador', $identificador)->first();
         $json = json_decode($peticion->request['data']);
         */
+       
+       $identificador = Input::get('identificador');
 
         //Para hacer la petición de descarga y guardado de facturas
         $identificador_request = $identificador;
@@ -380,7 +382,7 @@ class FacturaController extends Controller
         $client->emit('new', ['data' => $peticion->request]);
         $client->close();
 
-        return "Factutas almacenandas correctamente";
+        return "Factutas facenandas correctamente";
     }
 
     public function verificarRequest($anio, $mes, $tipo_consulta, $cliente_id)
